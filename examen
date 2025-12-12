@@ -1,26 +1,46 @@
 import { useState } from "react";
 
 const preguntas = [
-  {
-    id: 1,
-    texto: "¿Cuál es la presión máxima de una instalación receptora doméstica según normativa?",
-    opciones: ["25 mbar", "50 mbar", "200 mbar", "500 mbar"],
-    correcta: 1,
-  },
-  {
-    id: 2,
-    texto: "¿Qué potencia máxima puede tener un aparato conectado a conducto estanco en viviendas?",
-    opciones: ["24 kW", "70 kW", "50 kW", "110 kW"],
-    correcta: 1,
-  },
-  {
-    id: 3,
-    texto: "¿Qué tubo se usa habitualmente para IRC en gas natural segun normativa actual?",
-    opciones: ["Cobre", "Polietileno + metálico en interior", "Acero inoxidable corrugado", "PVC reforzado"],
-    correcta: 2,
-  },
-  // ... Continúa hasta 30 preguntas
+  { id: 1, texto: "Según la normativa española, ¿cuál es la presión típica de servicio en una instalación doméstica alimentada desde redes de baja presión?", opciones: ["20 mbar", "50 mbar", "100 mbar", "200 mbar"], correcta: 0 },
+  { id: 2, texto: "¿Qué norma recoge las características de tuberías, elementos y accesorios para instalaciones receptoras de gas en España?", opciones: ["UNE 60670", "ISO 9001", "UNE 12345", "IEC 61508"], correcta: 0 },
+  { id: 3, texto: "¿Cuál de estos materiales está especificado como válido para tuberías interiores de gas según UNE?", opciones: ["Cobre en estado duro", "PVC normal", "Cloruro de polivinilo sin homologación", "Hormigón"], correcta: 0 },
+  { id: 4, texto: "La prueba de estanqueidad de una instalación receptora se realiza para:", opciones: ["Comprobar que no existen fugas", "Medir el caudal de gas", "Calibrar el contador", "Comprobar la eficiencia de combustión"], correcta: 0 },
+  { id: 5, texto: "Para la evacuación de productos de la combustión, ¿qué opción es cierta según reglamento cuando se trata de aparatos estancos?", opciones: ["Pueden evacuar mediante salida directa en determinados casos", "Siempre deben usar chimenea común", "Nunca pueden evacuar por cubierta", "Deben evacuar sólo por fachada"], correcta: 0 },
+  { id: 6, texto: "¿Qué unidad se utiliza habitualmente para expresar la potencia térmica nominal de un aparato a gas?", opciones: ["kW (kilovatios)", "Pa (pascales)", "m3 (metros cúbicos)", "K (kelvin)"], correcta: 0 },
+  { id: 7, texto: "En instalaciones domésticas, la apertura de ventilación del local se calcula en función de:", opciones: ["La suma de las potencias caloríficas de los aparatos tipo A y B", "El número de ventanas del edificio", "La superficie total de la vivienda sin tener en cuenta potencia", "La temperatura exterior"], correcta: 0 },
+  { id: 8, texto: "¿Cuál es el objetivo principal del regulador de presión en una instalación receptora?", opciones: ["Mantener la presión de servicio correcta", "Aumentar la presión por seguridad", "Medir el consumo instantáneo", "Evitar la condensación"], correcta: 0 },
+  { id: 9, texto: "Según las guías técnicas, ¿qué tipo de unión es aceptable para un tubo corrugado flexible homologado?", opciones: ["Con abrazaderas o racores especificados por fabricante", "Soldadura a arco sin protecciones", "Pegado con adhesivo estándar", "Empalme con cinta americana"], correcta: 0 },
+  { id: 10, texto: "¿Qué aparato requiere habitualmente salida de humos por cubierta o fachada en una vivienda?", opciones: ["Caldera estanca de calefacción centralizada", "Placa de vitrocerámica eléctrica", "Horno microondas", "Termo eléctrico"], correcta: 0 },
+  { id: 11, texto: "¿Qué precaución es obligatoria antes de realizar una prueba de estanqueidad?", opciones: ["Purgar la instalación y aislar las partes no sometidas a prueba", "Abrir todas las llaves de gas", "Dejar enchufados los detectores de gas", "Incrementar la presión de red"], correcta: 0 },
+  { id: 12, texto: "La clasificación de aparatos a gas según tiro y evacuación incluye tipos A y B. ¿Qué caracteriza a un aparato de tipo A?", opciones: ["Debe instalarse en locales con ventilación adecuada y sin salida de humos obligatoria al exterior", "Es estanco y no necesita ventilación", "Es de combustión eléctrica", "Funciona con gasoleo"], correcta: 0 },
+  { id: 13, texto: "Para instalaciones alimentadas por envase único de GLP conectado a un solo aparato móvil, ¿tienen carácter de instalación receptora?", opciones: ["No necesariamente, dependiendo del peso y conexión según reglamento", "Siempre sí", "Nunca existen excepciones", "Solo si el envase >100 kg"], correcta: 0 },
+  { id: 14, texto: "¿Cuál es la finalidad de la rejilla o conducto de ventilación permanente en locales con aparatos atmosféricos?", opciones: ["Garantizar la renovación de aire y evitar acumulación de gas", "Aumentar la temperatura del local", "Crear sobrepresión en la vivienda", "Evitar la entrada de polvo"], correcta: 0 },
+  { id: 15, texto: "En instalaciones de cocina con varios fuegos, ¿qué documento o cálculo es necesario para dimensionar la instalación?", opciones: ["Suma de potencias caloríficas nominales y factores de simultaneidad según norma", "Medir la temperatura ambiente", "Contar el número de enchufes", "Medir la humedad"], correcta: 0 },
+  { id: 16, texto: "¿Qué elemento es un dispositivo de seguridad habitual en calderas domésticas para evitar retorno de llama?", opciones: ["Detector de ionización o termopar", "Válvula de retención eléctrica", "Interruptor diferencial", "Tubo capilar"], correcta: 0 },
+  { id: 17, texto: "Según normativa, ¿qué documentación se debe entregar al usuario tras la instalación receptora?", opciones: ["Boletín/Certificado de instalación y manuales de uso y mantenimiento", "Solo factura del instalador", "Ninguna documentación es necesaria", "Solo fotos de la instalación"], correcta: 0 },
+  { id: 18, texto: "¿Qué práctica es correcta al realizar un cambio de acometida o contador?", opciones: ["Coordinar con la distribuidora y realizar pruebas de estanqueidad posteriores", "Cambiar el contador sin notificar a nadie", "Ajustar la presión manualmente sin certificado", "Utilizar herramientas improvisadas"], correcta: 0 },
+  { id: 19, texto: "En la elección del material para una tubería vista en interior, ¿qué requisito mínimo suele exigirse para el cobre?", opciones: ["Espesor mínimo y estado duro según UNE (ej. 1 mm para tubería vista)", "Cualquier calibre vale", "Solo criterios estéticos", "Que sea pintable"], correcta: 0 },
+  { id: 20, texto: "¿Cuál es la causa más frecuente que motiva una prueba de estanqueidad fallida?", opciones: ["Juntas o accesorios mal ajustados en empalmes", "Que la red pública tenga baja presión", "Error del contador", "Mala lectura del medidor"], correcta: 0 },
+  { id: 21, texto: "¿Qué gas se considera combustible gaseoso y se regula en el RD 919/2006?", opciones: ["Gas natural y gases licuados del petróleo (GLP)", "Oxígeno", "Nitrógeno", "Argón"], correcta: 0 },
+  { id: 22, texto: "Para aparatos estancos o de tiro forzado, ¿hasta qué potencia puede admitirse la evacuación mediante salida directa en cubierta según algunas guías?", opciones: ["Hasta 70 kW en determinados casos", "Solo hasta 10 kW", "No se permite nunca", "Hasta 200 kW siempre"], correcta: 0 },
+  { id: 23, texto: "¿Qué norma define los requisitos de los tubos corrugados flexibles para gas?", opciones: ["UNE-EN 15266", "UNE 1234", "ISO 14001", "UNE-EN 5008"], correcta: 0 },
+  { id: 24, texto: "En una instalación receptora, ¿quién es responsable de la puesta en marcha y verificación final?", opciones: ["El instalador autorizado y, cuando proceda, la empresa mantenedora/distribuidora según el caso", "El usuario final sin conocimientos", "Solo la administración", "El fabricante del aparato únicamente"], correcta: 0 },
+  { id: 25, texto: "¿Qué medida preventiva es básica ante sospecha de fuga en una vivienda?", opciones: ["Ventilar, cortar suministro y no accionar interruptores eléctricos hasta ventilar", "Encender luces para ver la fuga", "Usar llama para localizar la fuga", "Esperar a que se disipe"], correcta: 0 },
+  { id: 26, texto: "¿Qué se entiende por instalación receptora según el reglamento?", opciones: ["El conjunto de tuberías y elementos interiores que conectan el punto de entrega con los aparatos", "Solo el contador", "Solo el regulador", "Solo la red pública"], correcta: 0 },
+  { id: 27, texto: "En el mantenimiento de una caldera, ¿qué comprobación es esencial para la seguridad de combustión?", opciones: ["Comprobación de evacuación de humos y tiro", "Pintar la carcasa", "Cambiar las pilas del termostato sin más", "Ajustar la tapa del contador"], correcta: 0 },
+  { id: 28, texto: "¿Cuál es la acción correcta si durante la prueba de estanqueidad se detecta una caída de presión?", opciones: ["Localizar y reparar la fuga antes de validar la instalación", "Ignorar la caída y certificar", "Aumentar presión hasta pasar la prueba", "Cerrar el local"], correcta: 0 },
+  { id: 29, texto: "¿Qué factor influye en el dimensionamiento de una conducción de gas interior?", opciones: ["Longitud, caudal (potencia) y pérdida de carga admissible", "Color de la tubería", "Marca del contador", "Altura del techo exclusivamente"], correcta: 0 },
+  { id: 30, texto: "¿Qué documento legal constituye el reglamento básico aplicable a las instalaciones interiores de gas en España?", opciones: ["Real Decreto 919/2006 (y sus actualizaciones)", "Código Civil", "Ley de Tráfico", "Real Decreto 123/1999 sin relación"], correcta: 0 }
 ];
+
+const Menu = ({ seleccionar }) => (
+  <div className="w-full flex gap-4 p-4 bg-gray-100 rounded-xl mb-6">
+    <button onClick={() => seleccionar('ex1')} className="px-4 py-2 rounded-xl bg-blue-200 hover:bg-blue-300">Examen 1</button>
+    <button onClick={() => seleccionar('ex2')} className="px-4 py-2 rounded-xl bg-gray-200 hover:bg-gray-300">Examen 2</button>
+    <button onClick={() => seleccionar('ex3')} className="px-4 py-2 rounded-xl bg-gray-200 hover:bg-gray-300">Examen 3</button>
+    {/* Agrega más exámenes cuando los tengamos */}
+  </div>
+);
 
 export default function ExamenGasB() {
   const [respuestas, setRespuestas] = useState({});
