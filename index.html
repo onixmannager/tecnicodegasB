@@ -3,345 +3,1804 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Resumen Examen Técnico Gas Categoría B</title>
+    <title>Guía Completa Técnico de Gas Categoría B | Examen Profesional</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
+        :root {
+            --primary: #2c3e50;
+            --secondary: #3498db;
+            --accent: #e74c3c;
+            --success: #27ae60;
+            --warning: #f39c12;
+            --light: #ecf0f1;
+            --dark: #2c3e50;
+            --gray: #7f8c8d;
+            --border-radius: 8px;
+            --shadow: 0 4px 12px rgba(0,0,0,0.1);
+            --transition: all 0.3s ease;
+        }
+        
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
         }
         
         body {
-            background-color: #f5f7fa;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.7;
             color: #333;
-            line-height: 1.6;
-            padding: 20px;
+            background-color: #f8f9fa;
+            padding-top: 70px;
+        }
+        
+        /* Header y Navegación */
+        header {
+            background-color: var(--primary);
+            color: white;
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 1000;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+        }
+        
+        .nav-container {
             max-width: 1200px;
             margin: 0 auto;
+            padding: 0 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 70px;
         }
         
-        header {
-            background: linear-gradient(135deg, #2c3e50, #4a6491);
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-size: 1.5rem;
+            font-weight: 700;
+        }
+        
+        .logo i {
+            color: var(--secondary);
+        }
+        
+        nav ul {
+            display: flex;
+            list-style: none;
+            gap: 20px;
+        }
+        
+        nav a {
             color: white;
-            padding: 30px;
-            border-radius: 10px;
-            margin-bottom: 30px;
-            text-align: center;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            text-decoration: none;
+            padding: 8px 16px;
+            border-radius: var(--border-radius);
+            transition: var(--transition);
+            font-weight: 500;
         }
         
-        h1 {
-            font-size: 2.5rem;
-            margin-bottom: 10px;
+        nav a:hover, nav a.active {
+            background-color: var(--secondary);
         }
         
-        h2 {
-            color: #2c3e50;
-            border-left: 5px solid #3498db;
-            padding-left: 15px;
-            margin: 30px 0 15px 0;
-            font-size: 1.8rem;
+        .mobile-menu-btn {
+            display: none;
+            background: none;
+            border: none;
+            color: white;
+            font-size: 1.5rem;
+            cursor: pointer;
         }
         
-        h3 {
-            color: #2980b9;
-            margin: 20px 0 10px 0;
-            font-size: 1.3rem;
-        }
-        
+        /* Contenedor principal */
         .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        
+        /* Secciones */
+        .section {
+            background-color: white;
+            border-radius: var(--border-radius);
+            box-shadow: var(--shadow);
+            padding: 30px;
+            margin-bottom: 30px;
+            transition: var(--transition);
+        }
+        
+        .section:hover {
+            box-shadow: 0 6px 18px rgba(0,0,0,0.12);
+        }
+        
+        .section-title {
+            color: var(--primary);
+            border-bottom: 3px solid var(--secondary);
+            padding-bottom: 10px;
+            margin-bottom: 25px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .section-title i {
+            color: var(--secondary);
+        }
+        
+        /* Tarjetas */
+        .cards-container {
             display: grid;
             grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
             gap: 25px;
-            margin-bottom: 30px;
+            margin: 25px 0;
         }
         
         .card {
-            background: white;
+            background-color: #f8f9fa;
+            border-radius: var(--border-radius);
             padding: 25px;
-            border-radius: 10px;
-            box-shadow: 0 3px 10px rgba(0,0,0,0.08);
-            transition: transform 0.3s ease;
+            border-left: 5px solid var(--secondary);
+            transition: var(--transition);
+            height: 100%;
         }
         
         .card:hover {
             transform: translateY(-5px);
+            box-shadow: var(--shadow);
         }
         
-        .highlight {
-            background-color: #fffde7;
-            border-left: 4px solid #ffc107;
-            padding: 15px;
-            margin: 15px 0;
-            border-radius: 0 5px 5px 0;
+        .card-title {
+            color: var(--primary);
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
         }
         
-        .warning {
-            background-color: #ffebee;
-            border-left: 4px solid #f44336;
-            padding: 15px;
-            margin: 15px 0;
-            border-radius: 0 5px 5px 0;
-        }
-        
+        /* Tablas */
         table {
             width: 100%;
             border-collapse: collapse;
             margin: 20px 0;
-            background: white;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+            background-color: white;
+            border-radius: var(--border-radius);
+            overflow: hidden;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
         }
         
         th {
-            background-color: #2c3e50;
+            background-color: var(--primary);
             color: white;
-            padding: 12px;
+            padding: 15px;
             text-align: left;
+            font-weight: 600;
         }
         
         td {
-            padding: 12px;
+            padding: 15px;
             border-bottom: 1px solid #eee;
         }
         
         tr:nth-child(even) {
-            background-color: #f8f9fa;
+            background-color: #f9f9f9;
         }
         
-        .formula {
+        tr:hover {
+            background-color: #f0f7ff;
+        }
+        
+        /* Fórmulas */
+        .formula-box {
+            background-color: #f0f7ff;
+            border-left: 5px solid var(--secondary);
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 0 var(--border-radius) var(--border-radius) 0;
             font-family: 'Courier New', monospace;
-            background-color: #f8f9fa;
-            padding: 10px 15px;
-            border-radius: 5px;
-            margin: 10px 0;
-            border-left: 4px solid #4CAF50;
             font-size: 1.1rem;
         }
         
-        footer {
-            text-align: center;
-            margin-top: 40px;
-            padding: 20px;
-            color: #7f8c8d;
-            font-size: 0.9rem;
-            border-top: 1px solid #eee;
+        .formula {
+            font-weight: bold;
+            color: var(--primary);
         }
         
+        .formula-explanation {
+            margin-top: 10px;
+            font-style: italic;
+            color: var(--gray);
+            font-size: 0.95rem;
+        }
+        
+        /* Listas */
+        ul.checklist, ol.procedure {
+            padding-left: 25px;
+            margin: 15px 0;
+        }
+        
+        ul.checklist li, ol.procedure li {
+            margin-bottom: 10px;
+            padding-left: 10px;
+        }
+        
+        ul.checklist li:before {
+            content: "✓";
+            color: var(--success);
+            font-weight: bold;
+            margin-right: 10px;
+        }
+        
+        /* Alertas y notas importantes */
+        .alert {
+            padding: 20px;
+            border-radius: var(--border-radius);
+            margin: 20px 0;
+            display: flex;
+            align-items: flex-start;
+            gap: 15px;
+        }
+        
+        .alert i {
+            font-size: 1.5rem;
+            margin-top: 3px;
+        }
+        
+        .alert-danger {
+            background-color: #ffebee;
+            border-left: 5px solid var(--accent);
+            color: #c62828;
+        }
+        
+        .alert-warning {
+            background-color: #fff8e1;
+            border-left: 5px solid var(--warning);
+            color: #ff8f00;
+        }
+        
+        .alert-info {
+            background-color: #e3f2fd;
+            border-left: 5px solid var(--secondary);
+            color: #1565c0;
+        }
+        
+        .alert-success {
+            background-color: #e8f5e9;
+            border-left: 5px solid var(--success);
+            color: #2e7d32;
+        }
+        
+        /* Botones */
+        .btn {
+            display: inline-block;
+            background-color: var(--secondary);
+            color: white;
+            padding: 12px 24px;
+            border-radius: var(--border-radius);
+            text-decoration: none;
+            font-weight: 600;
+            border: none;
+            cursor: pointer;
+            transition: var(--transition);
+        }
+        
+        .btn:hover {
+            background-color: #2980b9;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+        }
+        
+        .btn-danger {
+            background-color: var(--accent);
+        }
+        
+        .btn-danger:hover {
+            background-color: #c0392b;
+        }
+        
+        /* Footer */
+        footer {
+            background-color: var(--primary);
+            color: white;
+            padding: 40px 0;
+            margin-top: 50px;
+        }
+        
+        .footer-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+        }
+        
+        .footer-col h3 {
+            margin-bottom: 20px;
+            color: var(--secondary);
+        }
+        
+        .footer-col ul {
+            list-style: none;
+        }
+        
+        .footer-col ul li {
+            margin-bottom: 10px;
+        }
+        
+        .footer-col ul li a {
+            color: #ddd;
+            text-decoration: none;
+            transition: var(--transition);
+        }
+        
+        .footer-col ul li a:hover {
+            color: var(--secondary);
+            padding-left: 5px;
+        }
+        
+        .copyright {
+            text-align: center;
+            padding-top: 30px;
+            margin-top: 30px;
+            border-top: 1px solid #34495e;
+            color: #bdc3c7;
+            font-size: 0.9rem;
+        }
+        
+        /* Modo impresión */
         @media print {
-            .card {
+            header, footer, nav, .no-print {
+                display: none;
+            }
+            
+            body {
+                padding-top: 0;
+            }
+            
+            .section {
                 box-shadow: none;
                 border: 1px solid #ddd;
             }
-            .no-print {
+        }
+        
+        /* Responsive */
+        @media (max-width: 768px) {
+            nav ul {
                 display: none;
+                position: absolute;
+                top: 70px;
+                left: 0;
+                width: 100%;
+                background-color: var(--primary);
+                flex-direction: column;
+                padding: 20px;
+                box-shadow: 0 5px 10px rgba(0,0,0,0.2);
+            }
+            
+            nav ul.active {
+                display: flex;
+            }
+            
+            .mobile-menu-btn {
+                display: block;
+            }
+            
+            .cards-container {
+                grid-template-columns: 1fr;
+            }
+            
+            table {
+                display: block;
+                overflow-x: auto;
             }
         }
         
-        .button {
-            display: inline-block;
-            background-color: #3498db;
-            color: white;
-            padding: 10px 20px;
-            border-radius: 5px;
-            text-decoration: none;
-            margin: 10px 5px;
-            font-weight: bold;
+        /* Tabs de contenido */
+        .tabs {
+            display: flex;
+            flex-wrap: wrap;
+            border-bottom: 2px solid #eee;
+            margin-bottom: 20px;
         }
         
-        .button:hover {
-            background-color: #2980b9;
+        .tab {
+            padding: 12px 24px;
+            cursor: pointer;
+            font-weight: 600;
+            border-radius: var(--border-radius) var(--border-radius) 0 0;
+            transition: var(--transition);
+            border: 2px solid transparent;
+            border-bottom: none;
+            margin-bottom: -2px;
+        }
+        
+        .tab:hover {
+            background-color: #f0f7ff;
+        }
+        
+        .tab.active {
+            background-color: white;
+            border-color: #eee;
+            border-bottom-color: white;
+            color: var(--secondary);
+        }
+        
+        .tab-content {
+            display: none;
+            padding: 20px 0;
+        }
+        
+        .tab-content.active {
+            display: block;
+        }
+        
+        /* Diagrama esquemático */
+        .diagram {
+            background-color: #f9f9f9;
+            border-radius: var(--border-radius);
+            padding: 25px;
+            margin: 25px 0;
+            text-align: center;
+            border: 1px dashed #ddd;
+        }
+        
+        .diagram-title {
+            margin-bottom: 20px;
+            color: var(--primary);
+            font-weight: 600;
+        }
+        
+        /* Acordeón para preguntas frecuentes */
+        .accordion {
+            margin: 20px 0;
+        }
+        
+        .accordion-item {
+            border: 1px solid #eee;
+            border-radius: var(--border-radius);
+            margin-bottom: 10px;
+            overflow: hidden;
+        }
+        
+        .accordion-header {
+            padding: 18px 20px;
+            background-color: #f8f9fa;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-weight: 600;
+            transition: var(--transition);
+        }
+        
+        .accordion-header:hover {
+            background-color: #f0f7ff;
+        }
+        
+        .accordion-header.active {
+            background-color: #e3f2fd;
+            color: var(--secondary);
+        }
+        
+        .accordion-content {
+            padding: 0 20px;
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease-out;
+        }
+        
+        .accordion-content.active {
+            padding: 20px;
+            max-height: 500px;
+        }
+        
+        /* Índice de contenidos */
+        .index {
+            background-color: #f0f7ff;
+            border-radius: var(--border-radius);
+            padding: 25px;
+            margin-bottom: 30px;
+        }
+        
+        .index h3 {
+            margin-bottom: 15px;
+            color: var(--primary);
+        }
+        
+        .index ul {
+            columns: 2;
+            list-style: none;
+        }
+        
+        .index li {
+            margin-bottom: 10px;
+            break-inside: avoid;
+        }
+        
+        .index a {
+            color: var(--secondary);
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            padding: 5px 0;
+            transition: var(--transition);
+        }
+        
+        .index a:hover {
+            color: var(--primary);
+            padding-left: 5px;
+        }
+        
+        /* Números de referencia */
+        .ref-number {
+            display: inline-block;
+            background-color: var(--secondary);
+            color: white;
+            width: 28px;
+            height: 28px;
+            border-radius: 50%;
+            text-align: center;
+            line-height: 28px;
+            margin-right: 10px;
+            font-weight: bold;
+            font-size: 0.9rem;
+        }
+        
+        /* Elementos visuales */
+        .visual-element {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 20px 0;
+        }
+        
+        .color-box {
+            width: 20px;
+            height: 20px;
+            border-radius: 4px;
+            margin-right: 10px;
         }
     </style>
 </head>
 <body>
+    <!-- Header y Navegación -->
     <header>
-        <h1>📚 Resumen Completo</h1>
-        <h3>Técnico de Gas Categoría B - Examen Industria</h3>
-        <p>Todo lo esencial para recordar: normativa, distancias, fórmulas y procedimientos</p>
-        <div class="no-print">
-            <a href="javascript:window.print()" class="button">🖨️ Imprimir</a>
-            <a href="#normativa" class="button">📋 Normativa</a>
-            <a href="#distancias" class="button">📏 Distancias</a>
-            <a href="#formulas" class="button">🧮 Fórmulas</a>
+        <div class="nav-container">
+            <div class="logo">
+                <i class="fas fa-fire"></i>
+                <span>Técnico Gas Cat. B</span>
+            </div>
+            
+            <button class="mobile-menu-btn" id="mobileMenuBtn">
+                <i class="fas fa-bars"></i>
+            </button>
+            
+            <nav>
+                <ul id="navMenu">
+                    <li><a href="#inicio" class="active"><i class="fas fa-home"></i> Inicio</a></li>
+                    <li><a href="#normativa"><i class="fas fa-gavel"></i> Normativa</a></li>
+                    <li><a href="#distancias"><i class="fas fa-ruler"></i> Distancias</a></li>
+                    <li><a href="#formulas"><i class="fas fa-calculator"></i> Fórmulas</a></li>
+                    <li><a href="#instalaciones"><i class="fas fa-tools"></i> Instalaciones</a></li>
+                    <li><a href="#examen"><i class="fas fa-file-alt"></i> Examen</a></li>
+                </ul>
+            </nav>
         </div>
     </header>
     
-    <section id="normativa">
-        <h2>📜 1. NORMATIVA PRINCIPAL</h2>
-        <div class="container">
-            <div class="card">
-                <h3>RD 919/2006</h3>
-                <p><strong>Reglamento de Distribución y Utilización de Combustibles Gaseosos</strong></p>
-                <p>Norma básica. Define instalaciones, categorías profesionales, condiciones técnicas, inspecciones.</p>
+    <!-- Contenido Principal -->
+    <div class="container">
+        <!-- Sección Inicio/Índice -->
+        <section id="inicio" class="section">
+            <h1 class="section-title"><i class="fas fa-fire"></i> Guía Completa para Técnico de Gas Categoría B</h1>
+            
+            <div class="alert alert-info">
+                <i class="fas fa-info-circle"></i>
+                <div>
+                    <strong>Información actualizada</strong> - Esta guía recopila toda la información necesaria para el examen de Técnico de Gas Categoría B, según la normativa vigente en España. Última revisión: Octubre 2024.
+                </div>
             </div>
             
-            <div class="card">
-                <h3>RD 144/2019</h3>
-                <p><strong>Reglamento de Seguridad para Instalaciones de ICP</strong></p>
-                <p>Para instalaciones > 5 bar (equipos de proceso, plantas satélite).</p>
+            <div class="index">
+                <h3><i class="fas fa-list"></i> Índice de Contenidos</h3>
+                <ul>
+                    <li><a href="#normativa"><i class="fas fa-chevron-right"></i> 1. Normativa Principal</a></li>
+                    <li><a href="#clasificacion"><i class="fas fa-chevron-right"></i> 2. Clasificaciones</a></li>
+                    <li><a href="#distancias"><i class="fas fa-chevron-right"></i> 3. Distancias de Seguridad</a></li>
+                    <li><a href="#formulas"><i class="fas fa-chevron-right"></i> 4. Fórmulas y Cálculos</a></li>
+                    <li><a href="#componentes"><i class="fas fa-chevron-right"></i> 5. Componentes de Instalación</a></li>
+                    <li><a href="#pruebas"><i class="fas fa-chevron-right"></i> 6. Pruebas y Verificaciones</a></li>
+                    <li><a href="#revisiones"><i class="fas fa-chevron-right"></i> 7. Revisiones Obligatorias</a></li>
+                    <li><a href="#seguridad"><i class="fas fa-chevron-right"></i> 8. Seguridad y Emergencias</a></li>
+                    <li><a href="#examen"><i class="fas fa-chevron-right"></i> 9. Consejos para el Examen</a></li>
+                    <li><a href="#faq"><i class="fas fa-chevron-right"></i> 10. Preguntas Frecuentes</a></li>
+                </ul>
             </div>
             
-            <div class="card">
-                <h3>RITE</h3>
-                <p><strong>Reglamento de Instalaciones Térmicas</strong></p>
-                <p>Afecta a generadores de calor (calderas), rendimientos, chimeneas.</p>
+            <div class="visual-element">
+                <div style="display: flex; gap: 20px; flex-wrap: wrap;">
+                    <div style="text-align: center;">
+                        <div class="color-box" style="background-color: #2c3e50;"></div>
+                        <small>Normativa</small>
+                    </div>
+                    <div style="text-align: center;">
+                        <div class="color-box" style="background-color: #e74c3c;"></div>
+                        <small>Seguridad</small>
+                    </div>
+                    <div style="text-align: center;">
+                        <div class="color-box" style="background-color: #27ae60;"></div>
+                        <small>Procedimientos</small>
+                    </div>
+                    <div style="text-align: center;">
+                        <div class="color-box" style="background-color: #f39c12;"></div>
+                        <small>Atención</small>
+                    </div>
+                </div>
             </div>
-        </div>
-    </section>
-    
-    <section id="clasificacion">
-        <h2>🏷️ 2. CLASIFICACIONES</h2>
-        <div class="card">
-            <h3>Por Presión de Suministro</h3>
-            <ul>
-                <li><strong>BP (Baja Presión):</strong> Hasta 50 mbar</li>
-                <li><strong>MPA (Media Presión A):</strong> >50 mbar a 4 bar</li>
-                <li><strong>MPB (Media Presión B):</strong> >4 bar a 16 bar</li>
-                <li><strong>AP (Alta Presión):</strong> >16 bar</li>
+        </section>
+        
+        <!-- Sección Normativa -->
+        <section id="normativa" class="section">
+            <h2 class="section-title"><i class="fas fa-gavel"></i> 1. Normativa Principal</h2>
+            
+            <div class="alert alert-warning">
+                <i class="fas fa-exclamation-triangle"></i>
+                <div>
+                    <strong>Atención:</strong> Es obligatorio conocer la normativa aplicable. En el examen se realizan preguntas específicas sobre los reglamentos y sus contenidos.
+                </div>
+            </div>
+            
+            <div class="cards-container">
+                <div class="card">
+                    <h3 class="card-title"><i class="fas fa-file-contract"></i> RD 919/2006</h3>
+                    <p><strong>Reglamento de Distribución y Utilización de Combustibles Gaseosos</strong></p>
+                    <p>Norma fundamental que regula las instalaciones receptoras de gas. Establece:</p>
+                    <ul class="checklist">
+                        <li>Definiciones y clasificaciones</li>
+                        <li>Condiciones técnicas de las instalaciones</li>
+                        <li>Categorías profesionales y sus competencias</li>
+                        <li>Inspecciones y revisiones periódicas</li>
+                        <li>Documentación y certificaciones</li>
+                    </ul>
+                </div>
+                
+                <div class="card">
+                    <h3 class="card-title"><i class="fas fa-file-contract"></i> RD 144/2019</h3>
+                    <p><strong>Reglamento de Seguridad para Instalaciones de ICP</strong></p>
+                    <p>Aplica a instalaciones con presión superior a 5 bar (Instalaciones de Gas en Plantas Satélite, Equipos de Proceso).</p>
+                    <ul class="checklist">
+                        <li>Instalaciones de más de 5 bar</li>
+                        <li>Plantas satélite de GLP</li>
+                        <li>Equipos de proceso industrial</li>
+                        <li>Requisitos específicos de seguridad</li>
+                    </ul>
+                </div>
+                
+                <div class="card">
+                    <h3 class="card-title"><i class="fas fa-file-contract"></i> RITE y sus ITCs</h3>
+                    <p><strong>Reglamento de Instalaciones Térmicas en los Edificios</strong></p>
+                    <p>Regula los generadores de calor y sus instalaciones asociadas:</p>
+                    <ul class="checklist">
+                        <li>Rendimientos mínimos de generadores</li>
+                        <li>Chimeneas y evacuación de productos</li>
+                        <li>Instalaciones de ACS</li>
+                        <li>Conservación y mantenimiento</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="cards-container">
+                <div class="card">
+                    <h3 class="card-title"><i class="fas fa-file-contract"></i> REBT</h3>
+                    <p><strong>Reglamento Electrotécnico de Baja Tensión</strong></p>
+                    <p>Aplica a la parte eléctrica de las instalaciones de gas:</p>
+                    <ul class="checklist">
+                        <li>Instalaciones eléctricas en locales con gas</li>
+                        <li>Puestas a tierra</li>
+                        <li>Cuadros eléctricos y protecciones</li>
+                        <li>Distancias entre instalaciones</li>
+                    </ul>
+                </div>
+                
+                <div class="card">
+                    <h3 class="card-title"><i class="fas fa-file-contract"></i> CTE</h3>
+                    <p><strong>Código Técnico de la Edificación</strong></p>
+                    <p>Documentos Básicos aplicables:</p>
+                    <ul class="checklist">
+                        <li>DB-HS 3: Calidad del aire interior</li>
+                        <li>DB-HS 4: Suministro de agua</li>
+                        <li>Condiciones de ventilación</li>
+                        <li>Evacuación de productos de combustión</li>
+                    </ul>
+                </div>
+                
+                <div class="card">
+                    <h3 class="card-title"><i class="fas fa-file-contract"></i> Otras Normas</h3>
+                    <p><strong>Normas UNE y Guías Técnicas</strong></p>
+                    <ul class="checklist">
+                        <li>UNE 60670: Cálculo de instalaciones</li>
+                        <li>UNE 60623: Instalaciones de GLP</li>
+                        <li>Guías Técnicas del MITYC</li>
+                        <li>Normas de calidad del gas (EN 437)</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Sección Clasificaciones -->
+        <section id="clasificacion" class="section">
+            <h2 class="section-title"><i class="fas fa-list-alt"></i> 2. Clasificaciones de Instalaciones y Categorías</h2>
+            
+            <div class="tabs">
+                <div class="tab active" data-tab="presion">Por Presión</div>
+                <div class="tab" data-tab="caudal">Por Caudal</div>
+                <div class="tab" data-tab="categorias">Categorías Profesionales</div>
+            </div>
+            
+            <div class="tab-content active" id="presion">
+                <h3><i class="fas fa-tachometer-alt"></i> Clasificación por Presión de Suministro</h3>
+                
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Denominación</th>
+                            <th>Rango de Presión</th>
+                            <th>Aplicación Típica</th>
+                            <th>Consideraciones</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>Baja Presión (BP)</strong></td>
+                            <td>Hasta 50 mbar</td>
+                            <td>Viviendas, pequeños comercios</td>
+                            <td>No necesita regulación secundaria</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Media Presión A (MPA)</strong></td>
+                            <td>>50 mbar a 4 bar</td>
+                            <td>Edificios colectivos, industrias pequeñas</td>
+                            <td>Requiere regulador a la entrada</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Media Presión B (MPB)</strong></td>
+                            <td>>4 bar a 16 bar</td>
+                            <td>Industria, grandes consumidores</td>
+                            <td>Instalaciones especiales</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Alta Presión (AP)</strong></td>
+                            <td>>16 bar</td>
+                            <td>Transporte, distribución principal</td>
+                            <td>No aplicable a instalaciones receptoras</td>
+                        </tr>
+                    </tbody>
+                </table>
+                
+                <div class="alert alert-info">
+                    <i class="fas fa-info-circle"></i>
+                    <div>
+                        <strong>Nota:</strong> Para viviendas, normalmente se utiliza BP o MPA (con regulador a la entrada que reduce a BP dentro de la vivienda).
+                    </div>
+                </div>
+            </div>
+            
+            <div class="tab-content" id="caudal">
+                <h3><i class="fas fa-wind"></i> Clasificación por Caudal de Diseño</h3>
+                
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Tipo</th>
+                            <th>Caudal (m³/h)</th>
+                            <th>Ejemplos</th>
+                            <th>Regulación</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>Individual</strong></td>
+                            <td>Hasta 5-6</td>
+                            <td>Vivienda unifamiliar, pequeño local</td>
+                            <td>Contador individual</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Colectiva Centralizada</strong></td>
+                            <td>6 - 50</td>
+                            <td>Edificio de viviendas</td>
+                            <td>Centralización de contadores</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Colectiva con Regulación</strong></td>
+                            <td>> 50</td>
+                            <td>Grandes bloques, centros comerciales</td>
+                            <td>Armario de regulación</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Industrial</strong></td>
+                            <td>> 100</td>
+                            <td>Industria, hospitales, hoteles</td>
+                            <td>Sala de regulación específica</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            
+            <div class="tab-content" id="categorias">
+                <h3><i class="fas fa-user-tie"></i> Categorías Profesionales</h3>
+                
+                <div class="alert alert-success">
+                    <i class="fas fa-certificate"></i>
+                    <div>
+                        <strong>Categoría B:</strong> Puede proyectar, instalar, mantener y reparar instalaciones receptoras <strong>hasta 50 kW</strong> de potencia total y presiones <strong>hasta 4 bar</strong>.
+                    </div>
+                </div>
+                
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Categoría</th>
+                            <th>Límites de Competencia</th>
+                            <th>Actividades Permitidas</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>Categoría B</strong></td>
+                            <td>Hasta 50 kW y 4 bar</td>
+                            <td>Proyectar, instalar, mantener, reparar</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Categoría A</strong></td>
+                            <td>Sin límite de potencia/presión</td>
+                            <td>Todas las instalaciones receptoras</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Mantenedor</strong></td>
+                            <td>Hasta 50 kW y 4 bar</td>
+                            <td>Solo mantenimiento y reparación</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+        
+        <!-- Sección Distancias -->
+        <section id="distancias" class="section">
+            <h2 class="section-title"><i class="fas fa-ruler-combined"></i> 3. Distancias de Seguridad (OBLIGATORIAS)</h2>
+            
+            <div class="alert alert-danger">
+                <i class="fas fa-exclamation-circle"></i>
+                <div>
+                    <strong>¡MEMORIZAR ESTAS DISTANCIAS!</strong> Son de las preguntas más frecuentes en el examen. Presta especial atención a las distancias mínimas.
+                </div>
+            </div>
+            
+            <h3><i class="fas fa-expand-arrows-alt"></i> Distancias Principales</h3>
+            
+            <table>
+                <thead>
+                    <tr>
+                        <th>Elemento 1</th>
+                        <th>Elemento 2</th>
+                        <th>Distancia Mínima</th>
+                        <th>Normativa / Justificación</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>Tubería de gas</strong></td>
+                        <td>Hueco (ventana, puerta)</td>
+                        <td>50 cm horizontal<br>25 cm vertical</td>
+                        <td>Evitar fugas que entren al interior</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Tubería de gas</strong></td>
+                        <td>Desagüe / Bajante</td>
+                        <td>50 cm</td>
+                        <td>RD 919/2006 - Evitar corrosión y fugas</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Tubería de gas</strong></td>
+                        <td>Toma de corriente / Enchufe</td>
+                        <td>15 cm</td>
+                        <td>REBT - Seguridad eléctrica</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Llave de paso general</strong></td>
+                        <td>Entrada a vivienda</td>
+                        <td>Máx. 2 m</td>
+                        <td>Accesible para corte rápido</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Llave aparato</strong></td>
+                        <td>Conexión aparato</td>
+                        <td>10-20 cm</td>
+                        <td>Flexible homologado si < 2 m</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Ventilación recinto</strong></td>
+                        <td>Techo / Suelo</td>
+                        <td>Alta: < 30 cm techo<br>Baja: > 30 cm suelo</td>
+                        <td>Circulación correcta del aire</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Salida humos caldera estanca</strong></td>
+                        <td>Hueco propiedad ajena</td>
+                        <td>60 cm</td>
+                        <td>RITE - Evitar reentrada de gases</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Quemador</strong></td>
+                        <td>Pared (horizontal)</td>
+                        <td>50 cm</td>
+                        <td>Materiales no ignífugos</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Contador</strong></td>
+                        <td>Llama / Quemador</td>
+                        <td>50 cm</td>
+                        <td>Protección del contador</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Tubería en conducto</strong></td>
+                        <td>Conducto no estanco</td>
+                        <td>PROHIBIDO</td>
+                        <td>Excepto conducto específico estanco</td>
+                    </tr>
+                </tbody>
+            </table>
+            
+            <div class="diagram">
+                <h4 class="diagram-title"><i class="fas fa-project-diagram"></i> Esquema de Distancias en Ventilación</h4>
+                <p style="margin-bottom: 15px;">La ventilación debe cumplir con las distancias mínimas para garantizar la correcta renovación del aire:</p>
+                <div style="display: flex; justify-content: center; align-items: center; flex-wrap: wrap; gap: 30px;">
+                    <div style="text-align: center;">
+                        <div style="width: 100px; height: 150px; border: 2px solid #333; position: relative; margin: 0 auto;">
+                            <div style="position: absolute; top: 10px; left: 10px; right: 10px; height: 20px; background-color: #3498db; border-radius: 4px;"></div>
+                            <div style="position: absolute; bottom: 10px; left: 10px; right: 10px; height: 20px; background-color: #2ecc71; border-radius: 4px;"></div>
+                            <div style="position: absolute; top: 0; left: 50%; transform: translateX(-50%); font-size: 0.8rem; color: #e74c3c;">&lt; 30 cm</div>
+                            <div style="position: absolute; bottom: 0; left: 50%; transform: translateX(-50%); font-size: 0.8rem; color: #e74c3c;">&gt; 30 cm</div>
+                        </div>
+                        <p style="margin-top: 10px;"><strong>Ventilación correcta</strong></p>
+                    </div>
+                    <div style="text-align: left; max-width: 300px;">
+                        <p><strong>Explicación:</strong></p>
+                        <ul class="checklist">
+                            <li><span style="color: #3498db;">●</span> <strong>Parte alta:</strong> A menos de 30 cm del techo para evacuar aire viciado</li>
+                            <li><span style="color: #2ecc71;">●</span> <strong>Parte baja:</strong> A más de 30 cm del suelo para entrada de aire fresco</li>
+                            <li>Ambas rejillas deben tener <strong>mínimo 100 cm²</strong> de superficie libre cada una</li>
+                            <li>No deben estar obstruidas</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Sección Fórmulas -->
+        <section id="formulas" class="section">
+            <h2 class="section-title"><i class="fas fa-calculator"></i> 4. Fórmulas y Cálculos Fundamentales</h2>
+            
+            <div class="alert alert-info">
+                <i class="fas fa-lightbulb"></i>
+                <div>
+                    <strong>Consejo:</strong> Memoriza el PCS del gas natural (11 kWh/m³) y practica los cálculos de caudal y potencia.
+                </div>
+            </div>
+            
+            <h3><i class="fas fa-bolt"></i> Fórmulas de Potencia y Caudal</h3>
+            
+            <div class="formula-box">
+                <div class="formula">Caudal (m³/h) = Potencia (kW) / PCS (kWh/m³)</div>
+                <div class="formula-explanation">
+                    <strong>Donde:</strong><br>
+                    • PCS Gas Natural ≈ 11 kWh/m³ (valor a memorizar)<br>
+                    • PCS Gas Propano ≈ 25 kWh/m³<br>
+                    • PCS Gas Butano ≈ 31 kWh/m³
+                </div>
+            </div>
+            
+            <div class="example">
+                <h4><i class="fas fa-pen"></i> Ejemplo Práctico:</h4>
+                <p>Calcular el caudal de una caldera de 24 kW alimentada con gas natural:</p>
+                <div class="formula-box">
+                    <div class="formula">Caudal = 24 kW / 11 kWh/m³ = 2.18 m³/h</div>
+                </div>
+            </div>
+            
+            <h3 style="margin-top: 30px;"><i class="fas fa-tachometer-alt"></i> Cálculo del Caudal de Diseño</h3>
+            
+            <div class="formula-box">
+                <div class="formula">Q = K × Σ(Potencia Aparatos) / PCS</div>
+                <div class="formula-explanation">
+                    <strong>Donde:</strong><br>
+                    • Q = Caudal de diseño (m³/h)<br>
+                    • K = Coeficiente de simultaneidad<br>
+                    • Σ(Potencia Aparatos) = Suma de potencias nominales<br>
+                    • PCS = Poder Calorífico Superior
+                </div>
+            </div>
+            
+            <h4>Coeficientes de Simultaneidad (K):</h4>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Nº de Aparatos</th>
+                        <th>Coeficiente K</th>
+                        <th>Ejemplo Aplicación</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>1 aparato</td>
+                        <td>1.0</td>
+                        <td>Solo calefacción</td>
+                    </tr>
+                    <tr>
+                        <td>2 aparatos</td>
+                        <td>0.9</td>
+                        <td>Cocina + calentador</td>
+                    </tr>
+                    <tr>
+                        <td>3 aparatos</td>
+                        <td>0.85</td>
+                        <td>Cocina + caldera + calentador</td>
+                    </tr>
+                    <tr>
+                        <td>4 o más</td>
+                        <td>0.8 - 1.0</td>
+                        <td>Vivienda completa</td>
+                    </tr>
+                </tbody>
+            </table>
+            
+            <h3 style="margin-top: 30px;"><i class="fas fa-ruler"></i> Cálculo de Diámetros de Tubería</h3>
+            
+            <div class="alert alert-warning">
+                <i class="fas fa-exclamation-triangle"></i>
+                <div>
+                    <strong>Importante:</strong> Para el cálculo exacto se usa el nomograma de la UNE 60670. En examen suelen preguntar los factores que influyen en el cálculo.
+                </div>
+            </div>
+            
+            <p><strong>Factores que influyen en el diámetro:</strong></p>
+            <ul class="checklist">
+                <li><strong>Caudal de diseño (Q)</strong> - Directamente proporcional</li>
+                <li><strong>Longitud equivalente (L)</strong> = Longitud real + Penalizaciones por accesorios</li>
+                <li><strong>Material de la tubería</strong> (rugosidad)</li>
+                <li><strong>Caída de presión permitida (ΔP)</strong> - Normalmente 1 mbar por tramo</li>
             </ul>
             
-            <h3 style="margin-top: 20px;">Categorías Profesionales</h3>
-            <div class="highlight">
-                <p><strong>Categoría B:</strong> Puede proyectar, instalar y mantener instalaciones receptoras <strong>hasta 50 kW</strong> y presiones <strong>hasta 4 bar</strong>.</p>
+            <div class="formula-box">
+                <div class="formula">Fórmula de Renouard (para Media Presión):</div>
+                <div>P₁² - P₂² = 48.6 × S × L × Q¹.⁸² / D⁴.⁸²</div>
+                <div class="formula-explanation">
+                    <strong>Donde:</strong><br>
+                    • P₁, P₂ = Presiones inicial y final (bar)<br>
+                    • S = Densidad relativa del gas (0.62 para GN)<br>
+                    • L = Longitud equivalente (m)<br>
+                    • Q = Caudal (m³/h)<br>
+                    • D = Diámetro interior (mm)
+                </div>
             </div>
-        </div>
-    </section>
-    
-    <section id="distancias">
-        <h2>📏 3. DISTANCIAS DE SEGURIDAD (MEMORIZAR)</h2>
-        
-        <table>
-            <thead>
-                <tr>
-                    <th>Elemento</th>
-                    <th>Distancia Mínima</th>
-                    <th>Observación</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td><strong>Ventilación recintos</strong></td>
-                    <td>Alta: &lt;30 cm techo<br>Baja: &gt;30 cm suelo</td>
-                    <td>Aire viciado sale arriba, fresco entra abajo</td>
-                </tr>
-                <tr>
-                    <td><strong>Tubería a hueco (ventana)</strong></td>
-                    <td>Horizontal: 50 cm<br>Vertical: 25 cm</td>
-                    <td>Evitar fugas al interior</td>
-                </tr>
-                <tr>
-                    <td><strong>Tubería a desagüe</strong></td>
-                    <td>50 cm</td>
-                    <td></td>
-                </tr>
-                <tr>
-                    <td><strong>Tubería a enchufe</strong></td>
-                    <td>15 cm</td>
-                    <td>Según REBT</td>
-                </tr>
-                <tr>
-                    <td><strong>Llave de paso general</strong></td>
-                    <td>Máx. 2 m desde entrada</td>
-                    <td>Accesible y visible</td>
-                </tr>
-                <tr>
-                    <td><strong>Calderas estancas: salida humos</strong></td>
-                    <td>60 cm de hueco en propiedad ajena</td>
-                    <td>Evitar reentrada de gases (RITE)</td>
-                </tr>
-            </tbody>
-        </table>
-    </section>
-    
-    <section id="formulas">
-        <h2>🧮 4. FÓRMULAS FUNDAMENTALES</h2>
-        
-        <div class="card">
-            <h3>Potencia - Caudal (Aparato)</h3>
-            <div class="formula">
-                Caudal (m³/h) = Potencia (kW) / PCS (kWh/m³)
-            </div>
-            <p><strong>PCS Gas Natural ≈ 11 kWh/m³</strong></p>
-            <p><em>Ejemplo: Caldera 24 kW → 24 / 11 ≈ 2.18 m³/h</em></p>
             
-            <h3 style="margin-top: 25px;">Caudal de Diseño (Instalación)</h3>
-            <div class="formula">
-                Q = K × Σ(Potencia Aparatos) / PCS
-            </div>
-            <p><strong>K = Coeficiente de simultaneidad</strong> (≈1 para vivienda con 4+ aparatos)</p>
+            <h3 style="margin-top: 30px;"><i class="fas fa-wind"></i> Cálculo de Ventilación</h3>
             
-            <h3 style="margin-top: 25px;">Ventilación Salas de Calderas</h3>
-            <div class="formula">
-                S (cm²) = [Potencia Total (kW) × 5] + 30
+            <div class="formula-box">
+                <div class="formula">Para salas de calderas: S (cm²) = [Potencia Total (kW) × 5] + 30</div>
             </div>
-        </div>
-    </section>
-    
-    <section id="pruebas">
-        <h2>🔍 5. PRUEBAS DE ESTANQUEIDAD</h2>
+            
+            <div class="formula-box">
+                <div class="formula">Para recintos con aparatos atmosféricos: S (cm²) = 100 cm² (mínimo)</div>
+                <div class="formula-explanation">(50 cm² parte alta + 50 cm² parte baja)</div>
+            </div>
+        </section>
         
-        <div class="card">
-            <h3>Procedimiento OBLIGATORIO</h3>
-            <ol>
-                <li><strong>Presión de prueba:</strong> 50 mbar (BP) o 1.5× presión servicio (máx 50 mbar)</li>
-                <li><strong>Tiempo estabilización:</strong> 5 minutos</li>
-                <li><strong>Tiempo prueba:</strong> 10 minutos</li>
-                <li><strong>Pérdida admisible en examen:</strong> 0 mbar</li>
+        <!-- Sección Componentes -->
+        <section id="componentes" class="section">
+            <h2 class="section-title"><i class="fas fa-tools"></i> 5. Componentes de la Instalación Receptora</h2>
+            
+            <div class="cards-container">
+                <div class="card">
+                    <h3 class="card-title"><i class="fas fa-sliders-h"></i> Reguladores</h3>
+                    <p><strong>Función:</strong> Reducen y mantienen constante la presión de salida.</p>
+                    <ul class="checklist">
+                        <li><strong>1ª Etapa:</strong> De MPA a BP (en armario regulación)</li>
+                        <li><strong>2ª Etapa:</strong> De BP a presión aparato (en aparato)</li>
+                        <li>Deben estar en lugar ventilado</li>
+                        <li>Con llave de corte a la entrada y salida</li>
+                    </ul>
+                </div>
+                
+                <div class="card">
+                    <h3 class="card-title"><i class="fas fa-tachometer-alt"></i> Contadores</h3>
+                    <p><strong>Ubicación y características:</strong></p>
+                    <ul class="checklist">
+                        <li>En lugar ventilado y accesible</li>
+                        <li>Distancia mínima a llamas: 50 cm</li>
+                        <li>Protegido contra daños mecánicos</li>
+                        <li>Con llave de corte a la entrada</li>
+                        <li>En instalaciones colectivas: centralizados</li>
+                    </ul>
+                </div>
+                
+                <div class="card">
+                    <h3 class="card-title"><i class="fas fa-shield-alt"></i> Válvulas de Seguridad</h3>
+                    <p><strong>Tipos y aplicaciones:</strong></p>
+                    <ul class="checklist">
+                        <li><strong>Cortagás por temperatura:</strong> 90-100°C</li>
+                        <li><strong>Cortagás por detector de gas:</strong> Umbral 10-25% LIE</li>
+                        <li><strong>Obligatorias en cocinas profesionales</strong></li>
+                        <li>Recomendables en viviendas</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="cards-container">
+                <div class="card">
+                    <h3 class="card-title"><i class="fas fa-pipe"></i> Tuberías y Materiales</h3>
+                    <p><strong>Materiales permitidos:</strong></p>
+                    <ul class="checklist">
+                        <li><strong>Cobre:</strong> Semiduro, sin estañar en soldadura</li>
+                        <li><strong>Acero:</strong> Pintado exteriormente</li>
+                        <li><strong>Polietileno:</strong> Solo enterrado, color amarillo</li>
+                        <li><strong>Multicapa:</strong> Con accesorios press-fitting</li>
+                    </ul>
+                </div>
+                
+                <div class="card">
+                    <h3 class="card-title"><i class="fas fa-fire"></i> Evacuación de Productos</h3>
+                    <p><strong>Tipos de chimeneas:</strong></p>
+                    <ul class="checklist">
+                        <li><strong>Tipo B (atmosférica):</strong> Tiro natural, más restricciones</li>
+                        <li><strong>Tipo C (estanca):</strong> Tiro forzado, más flexible</li>
+                        <li><strong>Materiales:</strong> Acero inox, aluminio, fibrocemento</li>
+                        <li><strong>Inclinación:</strong> Mínimo 2% hacia el exterior</li>
+                    </ul>
+                </div>
+                
+                <div class="card">
+                    <h3 class="card-title"><i class="fas fa-compress-arrows-alt"></i> Elementos de Protección</h3>
+                    <ul class="checklist">
+                        <li><strong>Válvula de estanqueidad:</strong> Para pruebas</li>
+                        <li><strong>Llaves de paso:</strong> General, aparato, tramos</li>
+                        <li><strong>Filtros:</strong> Antes de reguladores sensibles</li>
+                        <li><strong>Juntas de dilatación:</strong> En cambios de dirección</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <h3 style="margin-top: 30px;"><i class="fas fa-project-diagram"></i> Esquema de una Instalación Receptora Básica</h3>
+            <div class="diagram">
+                <div style="text-align: left; max-width: 800px; margin: 0 auto;">
+                    <div style="display: flex; align-items: center; margin-bottom: 15px;">
+                        <div class="ref-number">1</div>
+                        <div><strong>Acometida:</strong> Conexión a la red de distribución</div>
+                    </div>
+                    <div style="display: flex; align-items: center; margin-bottom: 15px;">
+                        <div class="ref-number">2</div>
+                        <div><strong>Llave general de edificio:</strong> Accesible desde exterior</div>
+                    </div>
+                    <div style="display: flex; align-items: center; margin-bottom: 15px;">
+                        <div class="ref-number">3</div>
+                        <div><strong>Regulador (si MPA):</strong> Reduce a BP</div>
+                    </div>
+                    <div style="display: flex; align-items: center; margin-bottom: 15px;">
+                        <div class="ref-number">4</div>
+                        <div><strong>Contador:</strong> Medición del consumo</div>
+                    </div>
+                    <div style="display: flex; align-items: center; margin-bottom: 15px;">
+                        <div class="ref-number">5</div>
+                        <div><strong>Llave general de vivienda:</strong> Máx. 2 m desde entrada</div>
+                    </div>
+                    <div style="display: flex; align-items: center; margin-bottom: 15px;">
+                        <div class="ref-number">6</div>
+                        <div><strong>Derivaciones individuales:</strong> A cada aparato</div>
+                    </div>
+                    <div style="display: flex; align-items: center; margin-bottom: 15px;">
+                        <div class="ref-number">7</div>
+                        <div><strong>Llaves de aparato:</strong> 10-20 cm de conexión</div>
+                    </div>
+                    <div style="display: flex; align-items: center;">
+                        <div class="ref-number">8</div>
+                        <div><strong>Aparatos:</strong> Conexión mediante flexible homologado</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Sección Pruebas -->
+        <section id="pruebas" class="section">
+            <h2 class="section-title"><i class="fas fa-clipboard-check"></i> 6. Pruebas y Verificaciones</h2>
+            
+            <div class="alert alert-danger">
+                <i class="fas fa-exclamation-circle"></i>
+                <div>
+                    <strong>¡OJO EN EL EXAMEN!</strong> La prueba de estanqueidad debe dar pérdida 0 mbar. Conocer los tiempos y presiones es fundamental.
+                </div>
+            </div>
+            
+            <h3><i class="fas fa-check-double"></i> Prueba de Estanqueidad (OBLIGATORIA)</h3>
+            
+            <ol class="procedure">
+                <li><strong>Preparación:</strong> Conectar manómetro en válvula de estanqueidad. Cerrar todas las llaves de aparatos.</li>
+                <li><strong>Presurización:</strong> Insuflar aire o gas a presión de prueba:
+                    <ul class="checklist">
+                        <li>Para BP: <strong>50 mbar</strong></li>
+                        <li>Para MPA: <strong>1.5 × presión de servicio</strong> (máx. 50 mbar)</li>
+                    </ul>
+                </li>
+                <li><strong>Estabilización:</strong> Esperar <strong>5 minutos</strong> para temperatura estabilice.</li>
+                <li><strong>Prueba:</strong> Mantener presión durante <strong>10 minutos</strong>.</li>
+                <li><strong>Lectura:</strong> Al final de los 10 minutos, la pérdida debe ser <strong>0 mbar</strong> (en examen).</li>
             </ol>
             
-            <div class="warning">
-                <p><strong>⚠️ IMPORTANTE:</strong> Se realiza con manómetro en válvula de estanqueidad, con llaves de aparatos CERRADAS.</p>
+            <div class="formula-box">
+                <div class="formula">Pérdida admisible = 0 mbar (en teoría)</div>
+                <div class="formula-explanation">
+                    En la práctica existe una tolerancia mínima, pero para el examen la respuesta correcta es <strong>0 mbar de pérdida</strong>.
+                </div>
             </div>
-        </div>
-    </section>
-    
-    <section id="revisiones">
-        <h2>📅 6. REVISIONES OBLIGATORIAS</h2>
+            
+            <h3 style="margin-top: 30px;"><i class="fas fa-play-circle"></i> Prueba de Funcionamiento</h3>
+            
+            <ul class="checklist">
+                <li>Encender todos los aparatos a máxima potencia</li>
+                <li>Verificar que la <strong>llama es estable y azul</strong> (no amarilla)</li>
+                <li>Comprobar presión de llegada a cada aparato (consulta ficha técnica)</li>
+                <li>Verificar funcionamiento de termostatos y dispositivos de seguridad</li>
+                <li>Comprobar que no hay ruidos anómalos en la combustión</li>
+            </ul>
+            
+            <h3 style="margin-top: 30px;"><i class="fas fa-file-signature"></i> Documentación a Entregar</h3>
+            
+            <table>
+                <thead>
+                    <tr>
+                        <th>Documento</th>
+                        <th>Contenido</th>
+                        <th>Destinatario</th>
+                        <th>Plazo</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>Boletín/Certificado</strong></td>
+                        <td>Datos instalación, pruebas, firma instalador y empresa</td>
+                        <td>Cliente y compañía</td>
+                        <td>Al finalizar obra</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Instrucciones</strong></td>
+                        <td>Uso, mantenimiento, emergencias</td>
+                        <td>Cliente</td>
+                        <td>Al finalizar obra</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Comunicación</strong></td>
+                        <td>Alta/modificación instalación</td>
+                        <td>Compañía distribuidora</td>
+                        <td>24-48 horas</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Plano</strong></td>
+                        <td>Esquema de la instalación</td>
+                        <td>Cliente</td>
+                        <td>Opcional pero recomendable</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
         
-        <div class="container">
-            <div class="card">
-                <h3>Instalaciones Comunes</h3>
-                <p><strong>Cada 5 años</strong></p>
-                <p>Escaleras y zonas comunes</p>
-            </div>
+        <!-- Sección Revisiones -->
+        <section id="revisiones" class="section">
+            <h2 class="section-title"><i class="fas fa-calendar-alt"></i> 7. Revisiones Obligatorias y Mantenimiento</h2>
             
-            <div class="card">
-                <h3>Calderas (RITE)</h3>
-                <p><strong>Cada 2 años</strong></p>
-                <p>Uso doméstico</p>
-            </div>
+            <h3><i class="fas fa-clock"></i> Periodicidad de las Revisiones</h3>
             
-            <div class="card">
-                <h3>Locales Públicos</h3>
-                <p><strong>Cada 5 años</strong></p>
-                <p>(Cada 4 si hay equipo ICP)</p>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Tipo de Instalación</th>
+                        <th>Periodicidad</th>
+                        <th>Normativa</th>
+                        <th>Observaciones</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>Instalaciones receptoras comunes</strong> (escaleras, zonas comunes)</td>
+                        <td><span class="ref-number">5</span> Cada 5 años</td>
+                        <td>RD 919/2006</td>
+                        <td>Obligatorio para comunidades</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Calderas de calefacción y ACS</strong></td>
+                        <td><span class="ref-number">2</span> Cada 2 años</td>
+                        <td>RITE</td>
+                        <td>Uso doméstico</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Locales públicos / comerciales</strong></td>
+                        <td><span class="ref-number">5</span> Cada 5 años</td>
+                        <td>RD 919/2006</td>
+                        <td>Cada 4 años si hay equipo ICP</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Instalaciones individuales viviendas</strong></td>
+                        <td>No hay periodicidad legal</td>
+                        <td>-</td>
+                        <td>Recomendable cada 5 años</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Instalaciones industriales</strong> (ICP)</td>
+                        <td><span class="ref-number">4</span> Cada 4 años</td>
+                        <td>RD 144/2019</td>
+                        <td>Con equipo de proceso > 5 bar</td>
+                    </tr>
+                </tbody>
+            </table>
+            
+            <h3 style="margin-top: 30px;"><i class="fas fa-tasks"></i> Contenido de una Revisión Periódica</h3>
+            
+            <div class="cards-container">
+                <div class="card">
+                    <h4 class="card-title"><i class="fas fa-search"></i> Inspección Visual</h4>
+                    <ul class="checklist">
+                        <li>Estado tuberías y soportes</li>
+                        <li>Accesibilidad llaves de paso</li>
+                        <li>Ventilación de recintos</li>
+                        <li>Estado chimeneas y evacuación</li>
+                    </ul>
+                </div>
+                
+                <div class="card">
+                    <h4 class="card-title"><i class="fas fa-vial"></i> Pruebas</h4>
+                    <ul class="checklist">
+                        <li>Estanqueidad de la instalación</li>
+                        <li>Tiro de chimeneas (aparatos atmosféricos)</li>
+                        <li>Funcionamiento dispositivos seguridad</li>
+                        <li>Análisis de combustión (si aplica)</li>
+                    </ul>
+                </div>
+                
+                <div class="card">
+                    <h4 class="card-title"><i class="fas fa-file-medical-alt"></i> Documentación</h4>
+                    <ul class="checklist">
+                        <li>Certificado de revisión</li>
+                        <li>Parte de anomalías (si las hay)</li>
+                        <li>Recomendaciones al cliente</li>
+                        <li>Próxima revisión programada</li>
+                    </ul>
+                </div>
             </div>
-        </div>
-    </section>
-    
-    <section id="trampas">
-        <h2>🚨 7. POSIBLES PREGUNTAS TRAMPA</h2>
+        </section>
         
-        <div class="card">
-            <div class="warning">
-                <p><strong>¿Calentador atmosférico en baño?</strong> → NO (salvo excepciones muy específicas).</p>
+        <!-- Sección Seguridad -->
+        <section id="seguridad" class="section">
+            <h2 class="section-title"><i class="fas fa-shield-alt"></i> 8. Seguridad y Actuación ante Emergencias</h2>
+            
+            <div class="alert alert-danger">
+                <i class="fas fa-skull-crossbones"></i>
+                <div>
+                    <strong>PROTOCOLO DE ACTUACIÓN ANTE FUGA DE GAS - MEMORIZAR ESTE ORDEN</strong>
+                </div>
             </div>
             
-            <div class="highlight">
-                <p><strong>¿Prueba estanqueidad con aparatos conectados?</strong> → NO, con llaves de aparatos CERRADAS.</p>
+            <h3><i class="fas fa-exclamation-triangle"></i> Protocolo ante Fuga de Gas</h3>
+            
+            <ol class="procedure">
+                <li><strong>NO accionar interruptores eléctricos</strong> (ni encender ni apagar)</li>
+                <li><strong>NO utilizar teléfonos móviles</strong> en el interior</li>
+                <li><strong>Cortar el gas</strong> en la llave general</li>
+                <li><strong>Ventilar</strong> abriendo puertas y ventanas</li>
+                <li><strong>Evacuar</strong> el local si el olor es intenso</li>
+                <li><strong>Avisar</strong> a la empresa distribuidora (teléfono de urgencias 24h)</li>
+                <li><strong>No volver a entrar</strong> hasta que sea seguro</li>
+            </ol>
+            
+            <h3 style="margin-top: 30px;"><i class="fas fa-bell"></i> Detectores de Gas</h3>
+            
+            <div class="cards-container">
+                <div class="card">
+                    <h4 class="card-title"><i class="fas fa-gas-pump"></i> Gas Natural</h4>
+                    <p>Más ligero que el aire (densidad ≈ 0.62)</p>
+                    <ul class="checklist">
+                        <li>Instalar en <strong>parte alta</strong> de la estancia</li>
+                        <li>Umbral de alarma: 10-25% LIE</li>
+                        <li>Distancia a fuentes de ventilación: > 1 m</li>
+                    </ul>
+                </div>
+                
+                <div class="card">
+                    <h4 class="card-title"><i class="fas fa-fire"></i> GLP (Propano/Butano)</h4>
+                    <p>Más pesado que el aire (densidad ≈ 1.5-2.0)</p>
+                    <ul class="checklist">
+                        <li>Instalar en <strong>parte baja</strong> de la estancia</li>
+                        <li>Umbral de alarma: 10-25% LIE</li>
+                        <li>Especial atención en garajes y sótanos</li>
+                    </ul>
+                </div>
             </div>
             
-            <div class="warning">
-                <p><strong>¿Regulador antes o después del contador?</strong> → Depende. En MPA, regulador (1ª etapa) antes para bajar a BP.</p>
+            <h3 style="margin-top: 30px;"><i class="fas fa-fire-extinguisher"></i> Límites de Inflamabilidad</h3>
+            
+            <table>
+                <thead>
+                    <tr>
+                        <th>Combustible</th>
+                        <th>LIE (% en volumen)</th>
+                        <th>LSE (% en volumen)</th>
+                        <th>Temperatura de autoignición</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>Gas Natural</strong></td>
+                        <td>4.5%</td>
+                        <td>14.5%</td>
+                        <td>540°C</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Propano</strong></td>
+                        <td>2.1%</td>
+                        <td>9.5%</td>
+                        <td>470°C</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Butano</strong></td>
+                        <td>1.8%</td>
+                        <td>8.4%</td>
+                        <td>365°C</td>
+                    </tr>
+                </tbody>
+            </table>
+            
+            <div class="alert alert-info">
+                <i class="fas fa-info-circle"></i>
+                <div>
+                    <strong>LIE:</strong> Límite Inferior de Explosividad - Concentración mínima para que haya combustión.<br>
+                    <strong>LSE:</strong> Límite Superior de Explosividad - Concentración máxima para que haya combustión.
+                </div>
+            </div>
+        </section>
+        
+        <!-- Sección Examen -->
+        <section id="examen" class="section">
+            <h2 class="section-title"><i class="fas fa-file-alt"></i> 9. Consejos para el Examen</h2>
+            
+            <div class="alert alert-success">
+                <i class="fas fa-graduation-cap"></i>
+                <div>
+                    <strong>Estrategia de estudio:</strong> Combina el estudio teórico con la resolución de exámenes de convocatorias anteriores. Identifica los temas que más se repiten.
+                </div>
+            </div>
+            
+            <h3><i class="fas fa-lightbulb"></i> Recomendaciones Generales</h3>
+            
+            <div class="cards-container">
+                <div class="card">
+                    <h4 class="card-title"><i class="fas fa-book"></i> Estudio Teórico</h4>
+                    <ul class="checklist">
+                        <li>Memoriza <strong>distancias mínimas</strong></li>
+                        <li>Domina las <strong>fórmulas básicas</strong></li>
+                        <li>Conoce los <strong>plazos y periodicidades</strong></li>
+                        <li>Identifica <strong>preguntas trampa frecuentes</strong></li>
+                    </ul>
+                </div>
+                
+                <div class="card">
+                    <h4 class="card-title"><i class="fas fa-pen-fancy"></i> Durante el Examen</h4>
+                    <ul class="checklist">
+                        <li>Lee <strong>cuidadosamente</strong> cada pregunta</li>
+                        <li>Atento a palabras como <strong>"nunca", "siempre", "obligatorio"</strong></li>
+                        <li>Gestiona bien el <strong>tiempo</strong></li>
+                        <li>Revisa las respuestas al final</li>
+                    </ul>
+                </div>
+                
+                <div class="card">
+                    <h4 class="card-title"><i class="fas fa-chart-bar"></i> Temas Más Preguntados</h4>
+                    <ul class="checklist">
+                        <li>Distancias de seguridad</li>
+                        <li>Prueba de estanqueidad</li>
+                        <li>Categorías profesionales</li>
+                        <li>Ventilación de recintos</li>
+                        <li>Clasificación por presión</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <h3 style="margin-top: 30px;"><i class="fas fa-exclamation-circle"></i> Preguntas Trampa Frecuentes</h3>
+            
+            <div class="accordion">
+                <div class="accordion-item">
+                    <div class="accordion-header">
+                        <span>¿Se puede instalar un calentador atmosférico en un baño?</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="accordion-content">
+                        <p><strong>RESPUESTA: NO</strong> (salvo excepciones muy específicas con volúmenes grandes y ventilación directa al exterior).</p>
+                        <p>Los calentadores atmosféricos toman el aire del local donde se instalan. En baños, la humedad y espacio reducido hacen peligrosa su instalación.</p>
+                    </div>
+                </div>
+                
+                <div class="accordion-item">
+                    <div class="accordion-header">
+                        <span>¿La prueba de estanqueidad se hace con los aparatos conectados?</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="accordion-content">
+                        <p><strong>RESPUESTA: NO</strong>, se realiza con las llaves de aparatos <strong>CERRADAS</strong>, sobre la instalación fija únicamente.</p>
+                        <p>Los aparatos se prueban por separado en la prueba de funcionamiento.</p>
+                    </div>
+                </div>
+                
+                <div class="accordion-item">
+                    <div class="accordion-header">
+                        <span>¿Se puede pintar una tubería de cobre?</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="accordion-content">
+                        <p><strong>RESPUESTA: SÍ, con pintura especial</strong>, pero no es recomendable porque dificulta la detección de corrosión.</p>
+                        <p>Mejor dejar el cobre al natural o usar tuberías previamente pintadas de fábrica.</p>
+                    </div>
+                </div>
+                
+                <div class="accordion-item">
+                    <div class="accordion-header">
+                        <span>¿El regulador va antes o después del contador?</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="accordion-content">
+                        <p><strong>RESPUESTA: DEPENDE</strong>. En MPA, el regulador (de 1ª etapa) va <strong>antes</strong> para bajar a BP; luego va el contador que mide en BP.</p>
+                    </div>
+                </div>
+            </div>
+            
+            <h3 style="margin-top: 30px;"><i class="fas fa-universal-access"></i> Unidades y Conversiones (Memorizar)</h3>
+            
+            <div class="formula-box">
+                <div class="formula">1 bar = 1000 mbar = 100 kPa ≈ 1 atmósfera</div>
+                <div class="formula">1 kW = 860 kcal/h</div>
+                <div class="formula">1 m³ gas natural ≈ 11 kWh ≈ 9500 kcal</div>
+            </div>
+        </section>
+        
+        <!-- Sección Preguntas Frecuentes -->
+        <section id="faq" class="section">
+            <h2 class="section-title"><i class="fas fa-question-circle"></i> 10. Preguntas Frecuentes y Glosario</h2>
+            
+            <h3><i class="fas fa-book"></i> Glosario de Términos Técnicos</h3>
+            
+            <div class="cards-container">
+                <div class="card">
+                    <h4 class="card-title">A</h4>
+                    <p><strong>ACS:</strong> Agua Caliente Sanitaria</p>
+                    <p><strong>Armario de regulación:</strong> Recinto que contiene reguladores, válvulas y contadores</p>
+                </div>
+                
+                <div class="card">
+                    <h4 class="card-title">C</h4>
+                    <p><strong>Centralización de contadores:</strong> Agrupación de contadores individuales en un lugar común</p>
+                    <p><strong>Combustión estanca:</strong> Aparato que toma aire del exterior y evacúa productos al exterior</p>
+                </div>
+                
+                <div class="card">
+                    <h4 class="card-title">E</h4>
+                    <p><strong>Estanqueidad:</strong> Cualidad de no permitir fugas</p>
+                    <p><strong>Evacuación de productos:</strong> Salida al exterior de gases resultantes de la combustión</p>
+                </div>
+            </div>
+            
+            <div class="cards-container">
+                <div class="card">
+                    <h4 class="card-title">G</h4>
+                    <p><strong>GLP:</strong> Gas Licuado del Petróleo (propano, butano)</p>
+                    <p><strong>GN:</strong> Gas Natural</p>
+                </div>
+                
+                <div class="card">
+                    <h4 class="card-title">L</h4>
+                    <p><strong>LIE:</strong> Límite Inferior de Explosividad</p>
+                    <p><strong>LSE:</strong> Límite Superior de Explosividad</p>
+                </div>
+                
+                <div class="card">
+                    <h4 class="card-title">P</h4>
+                    <p><strong>PCS:</strong> Poder Calorífico Superior</p>
+                    <p><strong>PCI:</strong> Poder Calorífico Inferior</p>
+                </div>
+            </div>
+            
+            <h3 style="margin-top: 30px;"><i class="fas fa-question"></i> Preguntas de Examen Tipo</h3>
+            
+            <div class="alert alert-info">
+                <i class="fas fa-pencil-alt"></i>
+                <div>
+                    <strong>Ejercicio típico de cálculo:</strong> "Calcular el caudal necesario para una caldera de 28 kW y una cocina de 12 kW, con gas natural (PCS=11 kWh/m³) y coeficiente de simultaneidad 0.9"
+                </div>
+            </div>
+            
+            <div class="formula-box">
+                <div class="formula">Solución: Q = 0.9 × (28 + 12) / 11 = 0.9 × 40 / 11 = 36 / 11 = 3.27 m³/h</div>
+            </div>
+        </section>
+        
+        <!-- Sección Final -->
+        <div class="section" style="text-align: center; background: linear-gradient(135deg, #2c3e50, #4a6491); color: white;">
+            <h2 style="color: white; border-bottom-color: #3498db;"><i class="fas fa-trophy"></i> ¡Mucho Ánimo en tu Examen!</h2>
+            <p style="font-size: 1.2rem; margin: 20px 0;">Has repasado toda la información esencial para el examen de Técnico de Gas Categoría B.</p>
+            <p style="margin-bottom: 25px;">Recuerda: <strong>Estudia, practica con exámenes anteriores y confía en tu preparación.</strong></p>
+            <div style="display: flex; justify-content: center; gap: 15px; flex-wrap: wrap;">
+                <button class="btn" onclick="window.print()"><i class="fas fa-print"></i> Imprimir Guía</button>
+                <a href="#inicio" class="btn"><i class="fas fa-arrow-up"></i> Volver al Inicio</a>
             </div>
         </div>
-    </section>
+    </div>
     
+    <!-- Footer -->
     <footer>
-        <p>📌 <strong>Recuerda:</strong> Este resumen es una guía de estudio. Consulta siempre la normativa oficial vigente.</p>
-        <p>📚 <strong>Consejo final:</strong> Resuelve exámenes de convocatorias anteriores para detectar patrones de preguntas.</p>
-        <p>© Resumen para Técnico de Gas Categoría B | Última actualización conceptual: 2024</p>
+        <div class="footer-container">
+            <div class="footer-col">
+                <h3>Técnico Gas Cat. B</h3>
+                <p>Guía completa para el examen de certificación profesional.</p>
+                <p>Contenido actualizado según normativa vigente.</p>
+            </div>
+            
+            <div class="footer-col">
+                <h3>Enlaces Rápidos</h3>
+                <ul>
+                    <li><a href="#normativa"><i class="fas fa-chevron-right"></i> Normativa</a></li>
+                    <li><a href="#distancias"><i class="fas fa-chevron-right"></i> Distancias</a></li>
+                    <li><a href="#formulas"><i class="fas fa-chevron-right"></i> Fórmulas</a></li>
+                    <li><a href="#examen"><i class="fas fa-chevron-right"></i> Consejos Examen</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-col">
+                <h3>Normativa Principal</h3>
+                <ul>
+                    <li><a href="#"><i class="fas fa-file-pdf"></i> RD 919/2006</a></li>
+                    <li><a href="#"><i class="fas fa-file-pdf"></i> RD 144/2019</a></li>
+                    <li><a href="#"><i class="fas fa-file-pdf"></i> RITE</a></li>
+                    <li><a href="#"><i class="fas fa-file-pdf"></i> REBT</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-col">
+                <h3>Contacto</h3>
+                <p>Esta es una guía de estudio independiente.</p>
+                <p>Para consultas oficiales, contacta con el organismo certificador de tu comunidad autónoma.</p>
+            </div>
+        </div>
+        
+        <div class="copyright">
+            <p>© 2024 - Guía Completa para Técnico de Gas Categoría B. Fines educativos.</p>
+            <p>La información se proporciona "tal cual". Verifica siempre con la normativa oficial actualizada.</p>
+        </div>
     </footer>
+    
+    <script>
+        // Menú móvil
+        document.getElementById('mobileMenuBtn').addEventListener('click', function() {
+            document.getElementById('navMenu').classList.toggle('active');
+        });
+        
+        // Tabs
+        const tabs = document.querySelectorAll('.tab');
+        const tabContents = document.querySelectorAll('.tab-content');
+        
+        tabs.forEach(tab => {
+            tab.addEventListener('click', () => {
+                const target = tab.getAttribute('data-tab');
+                
+                // Remover active de todas las tabs
+                tabs.forEach(t => t.classList.remove('active'));
+                tabContents.forEach(tc => tc.classList.remove('active'));
+                
+                // Activar tab clickeada
+                tab.classList.add('active');
+                document.getElementById(target).classList.add('active');
+            });
+        });
+        
+        // Acordeón
+        const accordionHeaders = document.querySelectorAll('.accordion-header');
+        
+        accordionHeaders.forEach(header => {
+            header.addEventListener('click', () => {
+                const content = header.nextElementSibling;
+                const icon = header.querySelector('i');
+                
+                // Cerrar otros items
+                accordionHeaders.forEach(otherHeader => {
+                    if (otherHeader !== header) {
+                        otherHeader.classList.remove('active');
+                        otherHeader.nextElementSibling.classList.remove('active');
+                        otherHeader.querySelector('i').classList.remove('fa-chevron-up');
+                        otherHeader.querySelector('i').classList.add('fa-chevron-down');
+                    }
+                });
+                
+                // Toggle actual
+                header.classList.toggle('active');
+                content.classList.toggle('active');
+                
+                // Cambiar icono
+                if (header.classList.contains('active')) {
+                    icon.classList.remove('fa-chevron-down');
+                    icon.classList.add('fa-chevron-up');
+                } else {
+                    icon.classList.remove('fa-chevron-up');
+                    icon.classList.add('fa-chevron-down');
+                }
+            });
+        });
+        
+        // Navegación suave
+        document.querySelectorAll('nav a').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                
+                const targetId = this.getAttribute('href');
+                const targetSection = document.querySelector(targetId);
+                
+                if (targetSection) {
+                    // Cerrar menú móvil si está abierto
+                    document.getElementById('navMenu').classList.remove('active');
+                    
+                    // Actualizar active en nav
+                    document.querySelectorAll('nav a').forEach(a => a.classList.remove('active'));
+                    this.classList.add('active');
+                    
+                    // Scroll suave
+                    window.scrollTo({
+                        top: targetSection.offsetTop - 80,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+        
+        // Actualizar nav activo al hacer scroll
+        window.addEventListener('scroll', function() {
+            const sections = document.querySelectorAll('.section');
+            const navLinks = document.querySelectorAll('nav a');
+            
+            let current = '';
+            
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop - 100;
+                const sectionHeight = section.clientHeight;
+                
+                if (scrollY >= sectionTop) {
+                    current = section.getAttribute('id');
+                }
+            });
+            
+            navLinks.forEach(link => {
+                link.classList.remove('active');
+                if (link.getAttribute('href') === '#' + current) {
+                    link.classList.add('active');
+                }
+            });
+        });
+        
+        // Botón de impresión mejorado
+        const printBtn = document.querySelector('.btn[onclick="window.print()"]');
+        if (printBtn) {
+            printBtn.addEventListener('click', function() {
+                // Abre diálogo de impresión
+                setTimeout(() => {
+                    window.print();
+                }, 500);
+            });
+        }
+    </script>
 </body>
-</html>
+    </html>
