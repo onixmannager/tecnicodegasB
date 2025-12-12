@@ -3,86 +3,83 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Exámenes Gas B - Inicio</title>
+    <title>Examen 1 - Gas B</title>
     <style>
-        body {
-            font-family: Arial, sans-serif;
-            background: #f4f4f4;
-            margin: 0;
-            padding: 0;
-        }
-
-        header {
-            background: #222;
-            color: white;
-            padding: 15px;
-            text-align: center;
-        }
-
-        nav {
-            background: #444;
-            padding: 10px;
-            display: flex;
-            gap: 10px;
-            justify-content: center;
-        }
-
-        nav a {
-            color: white;
-            text-decoration: none;
-            background: #666;
-            padding: 8px 15px;
-            border-radius: 5px;
-        }
-
-        nav a:hover {
-            background: #888;
-        }
-
-        .container {
-            padding: 20px;
-            max-width: 900px;
-            margin: auto;
-            background: white;
-            margin-top: 20px;
-            border-radius: 10px;
-        }
-
-        h2 {
-            text-align: center;
-        }
-
-        ul {
-            line-height: 1.8;
-            font-size: 18px;
-        }
+        body { font-family: Arial, sans-serif; background:#f4f4f4; margin:0; padding:0; }
+        header { background:#222; color:white; padding:15px; text-align:center; }
+        nav { background:#444; padding:10px; display:flex; gap:10px; justify-content:center; }
+        nav a { color:white; text-decoration:none; background:#666; padding:8px 15px; border-radius:5px; }
+        nav a:hover { background:#888; }
+        .container { max-width:900px; background:white; margin:20px auto; padding:20px; border-radius:10px; }
+        .question { margin-bottom:25px; padding:15px; border:1px solid #ddd; border-radius:8px; }
+        button { margin-top:10px; padding:7px 12px; border:0; background:#222; color:white; border-radius:5px; cursor:pointer; }
+        .correct { color:green; font-weight:bold; }
+        .wrong { color:red; font-weight:bold; }
     </style>
 </head>
 <body>
+<header>
+    <h1>Examen 1 - Instalador Gas B</h1>
+</header>
+<nav>
+    <a href="index.html">Inicio</a>
+    <a href="examen1.html">Examen 1</a>
+</nav>
+<div class="container" id="exam"></div>
+<script>
+const preguntas = [
+    { p:"¿Cuál es la presión máxima de operación (MOP) en instalaciones receptoras de gas natural en interiores según el RD 919/2006?", r:["0,4 bar","1 bar","5 bar","2 bar"] },
+    { p:"¿Qué norma regula las instalaciones receptoras de gas en edificios?", r:["UNE 60670","UNE 60601","UNE 60710","EN 10255"] },
+    { p:"¿Qué gas se clasifica como G-20?", r:["Gas Natural","GLP Butano","Propano","Gas Ciudad"] },
+    { p:"¿Qué elemento evita el retroceso de llama en quemadores?", r:["Válvula antirretorno","Filtro de gas","Regulador secundario","Llave de aparato"] },
+    { p:"¿Cuál es la distancia mínima entre contador y una fuente de calor > 100ºC?", r:["30 cm","10 cm","50 cm","5 cm"] },
+    { p:"Para comprobar estanqueidad en tubería interior GN ¿qué presión se aplica?", r:["150 mbar","50 mbar","25 mbar","300 mbar"] },
+    { p:"El material permitido para tuberías interiores vista en GN es:", r:["Cobre o acero","PVC","Aluminio","Latón"] },
+    { p:"El GLP se acumula en:", r:["Zonas bajas","Zonas altas","No se acumula","Depende del viento"] },
+    { p:"¿Qué potencia define un aparato como de tipo B?", r:["Toma aire del local","Toma aire del exterior","Estanco","Condensación"] },
+    { p:"¿Qué documento debe entregar un instalador tras una modificación?", r:["Boletín IRG-2","Certificado IK","Fichero RTR","Licencia municipal"] },
+    { p:"Presión del butano en botella:", r:["~2 bar","~0,5 bar","~5 bar","~10 bar"] },
+    { p:"¿Qué diámetro mínimo suele exigir UNE 60670 para ventilación inferior?", r:["100 cm²","25 cm²","50 cm²","150 cm²"] },
+    { p:"¿Qué detecta el analizador de combustión?", r:["CO, CO₂ y rendimiento","Nivel de gas","Fugas","Presión"] },
+    { p:"Tubería de acero sin revestir enterrada:", r:["Prohibida","Permitida","Solo si es GN","Solo si es GLP"] },
+    { p:"¿Qué indica el caudal nominal de un contador?", r:["Caudal que puede medir","Volumen total","Presión máxima","Potencia térmica"] },
+    { p:"¿Cuál es la unidad de poder calorífico?", r:["kWh/m³","bar","mbar","%"] },
+    { p:"¿Qué prueba se realiza tras una reparación de tubería?", r:["Estanqueidad","Condensación","Rugosidad","Oxidación"] },
+    { p:"¿Qué aparato necesita chimenea obligatoriamente?", r:["Tipo B","Tipo A","Tipo C","Independiente"] },
+    { p:"¿Qué elemento regula la presión de entrada de GN?", r:["Regulador","Válvula manual","Filtro","Sonda NTC"] },
+    { p:"¿Qué es el coeficiente Z en gas?", r:["Factor de compresibilidad","Densidad","Índice Wobbe","Rugosidad"] },
+    { p:"¿Qué tubería se usa para enterrado en GLP?", r:["Polietileno PE","Cobre","Acero negro","PVC"] },
+    { p:"Condición obligatoria en sala de calderas:", r:["Ventilación permanente","Ventanas dobles","Moqueta","Puerta hermética"] },
+    { p:"¿Qué indica el índice Wobbe?", r:["Compatibilidad del gas con quemadores","Presión máxima","Densidad","Nivel de CO₂"] },
+    { p:"Un nivel de CO superior a 50 ppm en ambiente es:", r:["Peligroso","Normal","Inofensivo","Recomendado"] },
+    { p:"En instalación modular de GLP ¿qué es obligatorio?", r:["Válvula de inversión","Filtro de agua","Sonda lambda","Toma USB"] },
+    { p:"¿Qué herramienta detecta fugas pequeñas?", r:["Espuma o detector","Llave inglesa","Voltímetro","Flexómetro"] },
+    { p:"¿Qué documento certifica una revisión periódica?", r:["Certificado de revisión","Parte laboral","EPI","FIJO 20"] },
+    { p:"En GN el poder calorífico inferior suele ser:", r:["~9-10 kWh/m³","~20 kWh/m³","~2 kWh/m³","~50 kWh/m³"] },
+    { p:"¿Qué gas es más pesado que el aire?", r:["GLP","GN","Hidrógeno","Aire comprimido"] },
+    { p:"¿Qué es obligatorio antes de poner en servicio?", r:["Prueba de estanqueidad","Medir pH","Pintar tubería","Pedir informe meteorológico"] }
+];
 
-    <header>
-        <h1>Exámenes Gas B</h1>
-        <p>Selecciona el examen desde el menú</p>
-    </header>
+const cont = document.getElementById("exam");
+preguntas.forEach((q,i)=>{
+    let div=document.createElement("div");
+    div.className="question";
+    div.innerHTML=`<h3>${i+1}. ${q.p}</h3>`+
+        q.r.map((o,j)=>`<label><input type='radio' name='p${i}' value='${j}'> ${o}</label><br>`).join("")+
+        `<button onclick='corregir(${i})'>Corregir</button>`+
+        `<p id='r${i}'></p>`;
+    cont.appendChild(div);
+});
 
-    <nav>
-        <a href="index.html">Inicio</a>
-        <a href="examen1.html">Examen 1</a>
-        <a href="#">Examen 2</a>
-        <a href="#">Examen 3</a>
-    </nav>
-
-    <div class="container">
-        <h2>Bienvenido</h2>
-        <p>Aquí encontrarás todos los exámenes reales del curso de Instalador de Gas B. Cada día añadiremos uno nuevo.</p>
-
-        <h3>Exámenes disponibles:</h3>
-        <ul>
-            <li><a href="examen1.html">Examen 1</a> — 30 preguntas reales</li>
-            <li>Examen 2 — Próximamente</li>
-            <li>Examen 3 — Próximamente</li>
-        </ul>
-    </div>
-
+function corregir(i){
+    const sel=[...document.getElementsByName("p"+i)].find(r=>r.checked);
+    const out=document.getElementById("r"+i);
+    if(!sel){ out.innerHTML='<span class="wrong">Selecciona una respuesta.</span>'; return; }
+    if(sel.value==0){ out.innerHTML='<span class="correct">✔ Correcto</span>'; }
+    else{
+        out.innerHTML='<span class="wrong">✘ Incorrecto</span><br><span class="correct">Respuesta correcta: '+preguntas[i].r[0]+'</span>';
+    }
+}
+</script>
 </body>
 </html>
