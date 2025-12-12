@@ -3,86 +3,1696 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Exámenes Gas B - Inicio</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            background: #f4f4f4;
-            margin: 0;
-            padding: 0;
-        }
-
-        header {
-            background: #222;
-            color: white;
-            padding: 15px;
-            text-align: center;
-        }
-
-        nav {
-            background: #444;
-            padding: 10px;
-            display: flex;
-            gap: 10px;
-            justify-content: center;
-        }
-
-        nav a {
-            color: white;
-            text-decoration: none;
-            background: #666;
-            padding: 8px 15px;
-            border-radius: 5px;
-        }
-
-        nav a:hover {
-            background: #888;
-        }
-
-        .container {
-            padding: 20px;
-            max-width: 900px;
-            margin: auto;
-            background: white;
-            margin-top: 20px;
-            border-radius: 10px;
-        }
-
-        h2 {
-            text-align: center;
-        }
-
-        ul {
-            line-height: 1.8;
-            font-size: 18px;
-        }
-    </style>
+    <title>Guía Completa Técnico de Gas B - España</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
-
-    <header>
-        <h1>Exámenes Gas B</h1>
-        <p>Selecciona el examen desde el menú</p>
+    <!-- Header con navegación -->
+    <header class="header">
+        <div class="container">
+            <div class="logo">
+                <i class="fas fa-fire"></i>
+                <h1>Técnico de Gas B</h1>
+            </div>
+            <button class="menu-toggle" id="menuToggle">
+                <i class="fas fa-bars"></i>
+            </button>
+            <nav class="nav" id="mainNav">
+                <a href="#inicio" class="nav-link active">Inicio</a>
+                <a href="#normativas" class="nav-link">Normativas UNE</a>
+                <a href="#formulas" class="nav-link">Fórmulas</a>
+                <a href="#distancias" class="nav-link">Distancias</a>
+                <a href="#instalacion" class="nav-link">Instalación</a>
+                <a href="#pruebas" class="nav-link">Pruebas</a>
+                <a href="#mantenimiento" class="nav-link">Mantenimiento</a>
+                <a href="#seguridad" class="nav-link">Seguridad</a>
+            </nav>
+        </div>
     </header>
 
-    <nav>
-        <a href="index.html">Inicio</a>
-        <a href="examen1.html">Examen 1</a>
-        <a href="#">Examen 2</a>
-        <a href="#">Examen 3</a>
-    </nav>
-
-    <div class="container">
-        <h2>Bienvenido</h2>
-        <p>Aquí encontrarás todos los exámenes reales del curso de Instalador de Gas B. Cada día añadiremos uno nuevo.</p>
-
-        <h3>Exámenes disponibles:</h3>
-        <ul>
-            <li><a href="examen1.html">Examen 1</a> — 30 preguntas reales</li>
-            <li>Examen 2 — Próximamente</li>
-            <li>Examen 3 — Próximamente</li>
-        </ul>
+    <!-- Barra de búsqueda -->
+    <div class="search-bar">
+        <div class="container">
+            <div class="search-input-wrapper">
+                <i class="fas fa-search"></i>
+                <input type="text" id="searchInput" placeholder="Buscar normativa, fórmula, procedimiento...">
+                <button class="clear-search" id="clearSearch">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+        </div>
     </div>
 
+    <main class="main-content">
+        <div class="container">
+            <!-- Sección Inicio -->
+            <section id="inicio" class="section">
+                <div class="section-header">
+                    <h2><i class="fas fa-home"></i> Introducción al Técnico de Gas B</h2>
+                </div>
+                <div class="card">
+                    <h3>¿Qué es un Técnico de Gas B?</h3>
+                    <p>El Técnico de Gas tipo B es un profesional autorizado para realizar instalaciones, mantenimiento y reparaciones en instalaciones de gas natural y GLP (Gases Licuados del Petróleo) en España. Esta certificación está regulada por el Reglamento de Instalaciones Térmicas en los Edificios (RITE) y otras normativas específicas.</p>
+                    
+                    <h4>Competencias del Técnico Gas B:</h4>
+                    <ul>
+                        <li><i class="fas fa-check"></i> Instalaciones receptoras de gas con presión de suministro ≤ 5 bar</li>
+                        <li><i class="fas fa-check"></i> Potencia nominal instalada ≤ 70 kW (gas natural) o ≤ 150 kW (GLP)</li>
+                        <li><i class="fas fa-check"></i> Instalaciones en viviendas unifamiliares y pequeños comercios</li>
+                        <li><i class="fas fa-check"></i> Montaje de aparatos de gas (calderas, cocinas, calentadores)</li>
+                        <li><i class="fas fa-check"></i> Pruebas de estanqueidad y puesta en marcha</li>
+                        <li><i class="fas fa-check"></i> Mantenimiento y reparaciones de instalaciones</li>
+                    </ul>
+
+                    <div class="alert alert-info">
+                        <i class="fas fa-info-circle"></i>
+                        <strong>Nota importante:</strong> Para instalaciones con mayor potencia o presión se requiere la certificación de Técnico Gas A.
+                    </div>
+                </div>
+            </section>
+
+            <!-- Sección Normativas UNE -->
+            <section id="normativas" class="section">
+                <div class="section-header">
+                    <h2><i class="fas fa-book"></i> Normativas UNE Aplicables</h2>
+                </div>
+
+                <div class="card">
+                    <h3>Normativas Principales</h3>
+                    
+                    <div class="normativa-item">
+                        <h4><i class="fas fa-file-alt"></i> UNE 60670-6:2014</h4>
+                        <p><strong>Instalaciones receptoras de gas suministradas a una presión máxima de operación (MOP) inferior o igual a 5 bar. Parte 6: Instalaciones de GLP</strong></p>
+                        <ul>
+                            <li>Requisitos de instalación para GLP</li>
+                            <li>Dimensionado de tuberías</li>
+                            <li>Características de los materiales</li>
+                            <li>Ubicación de contadores y reguladores</li>
+                        </ul>
+                    </div>
+
+                    <div class="normativa-item">
+                        <h4><i class="fas fa-file-alt"></i> UNE 60670-4:2016</h4>
+                        <p><strong>Instalaciones receptoras de gas - Parte 4: Modificación de instalaciones, reparaciones y mantenimiento</strong></p>
+                        <ul>
+                            <li>Procedimientos de modificación</li>
+                            <li>Requisitos de reparación</li>
+                            <li>Protocolos de mantenimiento</li>
+                            <li>Registros y documentación</li>
+                        </ul>
+                    </div>
+
+                    <div class="normativa-item">
+                        <h4><i class="fas fa-file-alt"></i> UNE 60670-8:2013</h4>
+                        <p><strong>Instalaciones receptoras de gas - Parte 8: Recepción e inspección</strong></p>
+                        <ul>
+                            <li>Protocolo de recepción de instalaciones</li>
+                            <li>Inspecciones periódicas</li>
+                            <li>Criterios de aceptación/rechazo</li>
+                            <li>Documentación requerida</li>
+                        </ul>
+                    </div>
+
+                    <div class="normativa-item">
+                        <h4><i class="fas fa-file-alt"></i> UNE 60310:2020</h4>
+                        <p><strong>Aparatos a gas - Instalación, revisión y puesta en marcha</strong></p>
+                        <ul>
+                            <li>Instalación de calderas y calentadores</li>
+                            <li>Requisitos de ventilación</li>
+                            <li>Sistemas de evacuación de productos de combustión</li>
+                            <li>Puesta en marcha y verificación</li>
+                        </ul>
+                    </div>
+
+                    <div class="normativa-item">
+                        <h4><i class="fas fa-file-alt"></i> UNE 60601:2020</h4>
+                        <p><strong>Reguladores de presión de gas para uso doméstico e industrial hasta 100 kPa</strong></p>
+                        <ul>
+                            <li>Características técnicas de reguladores</li>
+                            <li>Instalación y ubicación</li>
+                            <li>Mantenimiento y verificación</li>
+                        </ul>
+                    </div>
+
+                    <div class="normativa-item">
+                        <h4><i class="fas fa-file-alt"></i> UNE 60620:2014</h4>
+                        <p><strong>Tubos flexibles para conexión de aparatos de gas</strong></p>
+                        <ul>
+                            <li>Tipos de tubos flexibles permitidos</li>
+                            <li>Longitudes máximas</li>
+                            <li>Instalación y fijación</li>
+                            <li>Vida útil y reemplazo</li>
+                        </ul>
+                    </div>
+
+                    <div class="normativa-item">
+                        <h4><i class="fas fa-file-alt"></i> UNE-EN 1775:2007</h4>
+                        <p><strong>Suministro de gas - Tuberías de gas en edificios - Presión máxima de operación inferior o igual a 5 bar</strong></p>
+                        <ul>
+                            <li>Diseño de redes de distribución</li>
+                            <li>Materiales permitidos</li>
+                            <li>Métodos de unión</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <h3>Reglamentación Complementaria</h3>
+                    <div class="table-responsive">
+                        <table class="data-table">
+                            <thead>
+                                <tr>
+                                    <th>Reglamento/Norma</th>
+                                    <th>Descripción</th>
+                                    <th>Aplicación</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td><strong>RD 919/2006</strong></td>
+                                    <td>Reglamento técnico de distribución y utilización de combustibles gaseosos</td>
+                                    <td>Marco legal general</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>ITC-ICG 03</strong></td>
+                                    <td>Instalaciones de almacenamiento de GLP en depósitos fijos</td>
+                                    <td>Depósitos de GLP</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>ITC-ICG 06</strong></td>
+                                    <td>Instalaciones de almacenamiento de GLP en botellas</td>
+                                    <td>Botellas y baterías</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>ITC-ICG 07</strong></td>
+                                    <td>Instalaciones receptoras de combustibles gaseosos</td>
+                                    <td>Instalaciones interiores</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>RITE</strong></td>
+                                    <td>Reglamento de Instalaciones Térmicas en Edificios</td>
+                                    <td>Calderas y climatización</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Sección Fórmulas -->
+            <section id="formulas" class="section">
+                <div class="section-header">
+                    <h2><i class="fas fa-calculator"></i> Fórmulas Técnicas</h2>
+                </div>
+
+                <div class="card">
+                    <h3>1. Cálculo de Caudal de Gas</h3>
+                    <div class="formula-box">
+                        <h4>Fórmula de Renouard (Gas Natural)</h4>
+                        <div class="formula">
+                            ΔP = 48,5 × 10⁶ × (Q¹·⁸² / (D⁴·⁸² × δ)) × L
+                        </div>
+                        <div class="formula-vars">
+                            <p><strong>Donde:</strong></p>
+                            <ul>
+                                <li><strong>ΔP</strong> = Pérdida de carga (Pa)</li>
+                                <li><strong>Q</strong> = Caudal de gas (m³/h)</li>
+                                <li><strong>D</strong> = Diámetro interior de la tubería (mm)</li>
+                                <li><strong>δ</strong> = Densidad relativa del gas (0,6 para gas natural)</li>
+                                <li><strong>L</strong> = Longitud de la tubería (m)</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="formula-box">
+                        <h4>Fórmula de Renouard (GLP)</h4>
+                        <div class="formula">
+                            ΔP = 48,5 × 10⁶ × (Q¹·⁸² / (D⁴·⁸² × 2,0)) × L
+                        </div>
+                        <p class="note">Para GLP se utiliza δ = 2,0 (densidad relativa respecto al aire)</p>
+                    </div>
+
+                    <div class="formula-box">
+                        <h4>Potencia a Caudal</h4>
+                        <div class="formula">
+                            Q = P / (PCI × η)
+                        </div>
+                        <div class="formula-vars">
+                            <ul>
+                                <li><strong>Q</strong> = Caudal (m³/h)</li>
+                                <li><strong>P</strong> = Potencia del aparato (kW)</li>
+                                <li><strong>PCI</strong> = Poder Calorífico Inferior (kWh/m³)
+                                    <ul>
+                                        <li>Gas Natural: 10,7 kWh/m³</li>
+                                        <li>Propano: 25,8 kWh/m³</li>
+                                        <li>Butano: 33,5 kWh/m³</li>
+                                    </ul>
+                                </li>
+                                <li><strong>η</strong> = Rendimiento del aparato (típicamente 0,9 - 0,95)</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <h3>2. Dimensionado de Tuberías</h3>
+                    
+                    <div class="formula-box">
+                        <h4>Pérdida de Carga Máxima Admisible</h4>
+                        <div class="formula">
+                            ΔP máx = 10% × P entrada
+                        </div>
+                        <p class="note">La pérdida de carga total no debe superar el 10% de la presión de entrada</p>
+                    </div>
+
+                    <div class="table-responsive">
+                        <h4>Tabla de Diámetros Mínimos (Gas Natural - 20 mbar)</h4>
+                        <table class="data-table">
+                            <thead>
+                                <tr>
+                                    <th>Potencia Total (kW)</th>
+                                    <th>5m</th>
+                                    <th>10m</th>
+                                    <th>15m</th>
+                                    <th>20m</th>
+                                    <th>25m</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>12 kW</td>
+                                    <td>15 mm</td>
+                                    <td>15 mm</td>
+                                    <td>15 mm</td>
+                                    <td>20 mm</td>
+                                    <td>20 mm</td>
+                                </tr>
+                                <tr>
+                                    <td>24 kW</td>
+                                    <td>15 mm</td>
+                                    <td>20 mm</td>
+                                    <td>20 mm</td>
+                                    <td>25 mm</td>
+                                    <td>25 mm</td>
+                                </tr>
+                                <tr>
+                                    <td>35 kW</td>
+                                    <td>20 mm</td>
+                                    <td>25 mm</td>
+                                    <td>25 mm</td>
+                                    <td>32 mm</td>
+                                    <td>32 mm</td>
+                                </tr>
+                                <tr>
+                                    <td>50 kW</td>
+                                    <td>25 mm</td>
+                                    <td>25 mm</td>
+                                    <td>32 mm</td>
+                                    <td>32 mm</td>
+                                    <td>40 mm</td>
+                                </tr>
+                                <tr>
+                                    <td>70 kW</td>
+                                    <td>25 mm</td>
+                                    <td>32 mm</td>
+                                    <td>32 mm</td>
+                                    <td>40 mm</td>
+                                    <td>40 mm</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <h3>3. Cálculo de Ventilación</h3>
+                    
+                    <div class="formula-box">
+                        <h4>Ventilación Superior (Evacuación)</h4>
+                        <div class="formula">
+                            S superior = 5 cm² por cada kW de potencia útil (mínimo 50 cm²)
+                        </div>
+                    </div>
+
+                    <div class="formula-box">
+                        <h4>Ventilación Inferior (Admisión)</h4>
+                        <div class="formula">
+                            S inferior = 2 × S superior
+                        </div>
+                    </div>
+
+                    <div class="alert alert-warning">
+                        <i class="fas fa-exclamation-triangle"></i>
+                        <strong>Importante:</strong> Para aparatos atmosféricos en local cerrado, la ventilación inferior debe ser el doble de la superior.
+                    </div>
+                </div>
+
+                <div class="card">
+                    <h3>4. Pruebas de Estanqueidad</h3>
+                    
+                    <div class="formula-box">
+                        <h4>Caída de Presión Admisible</h4>
+                        <div class="formula">
+                            ΔP admisible = 1% de la presión de prueba en 1 hora
+                        </div>
+                        <p class="note">Ejemplo: Para una prueba a 100 mbar, la caída máxima admisible es 1 mbar en 1 hora</p>
+                    </div>
+
+                    <div class="table-responsive">
+                        <h4>Presiones de Prueba según Tipo de Instalación</h4>
+                        <table class="data-table">
+                            <thead>
+                                <tr>
+                                    <th>Tipo de Instalación</th>
+                                    <th>Presión de Servicio</th>
+                                    <th>Presión de Prueba</th>
+                                    <th>Duración</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>GLP - Baja presión</td>
+                                    <td>28-37 mbar</td>
+                                    <td>150 mbar</td>
+                                    <td>1 hora</td>
+                                </tr>
+                                <tr>
+                                    <td>Gas Natural - Baja presión</td>
+                                    <td>18-22 mbar</td>
+                                    <td>100 mbar</td>
+                                    <td>1 hora</td>
+                                </tr>
+                                <tr>
+                                    <td>Media presión A (MPA)</td>
+                                    <td>0,05-0,4 bar</td>
+                                    <td>1,5 × P servicio</td>
+                                    <td>1 hora</td>
+                                </tr>
+                                <tr>
+                                    <td>Media presión B (MPB)</td>
+                                    <td>0,4-5 bar</td>
+                                    <td>1,5 × P servicio</td>
+                                    <td>24 horas</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Sección Distancias -->
+            <section id="distancias" class="section">
+                <div class="section-header">
+                    <h2><i class="fas fa-ruler"></i> Distancias de Seguridad</h2>
+                </div>
+
+                <div class="card">
+                    <h3>Distancias para Instalaciones de GLP</h3>
+                    
+                    <div class="table-responsive">
+                        <h4>Depósitos Fijos de GLP (Aéreos)</h4>
+                        <table class="data-table">
+                            <thead>
+                                <tr>
+                                    <th>Elemento</th>
+                                    <th>Capacidad ≤ 5 m³</th>
+                                    <th>Capacidad 5-10 m³</th>
+                                    <th>Capacidad > 10 m³</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Límite de propiedad</td>
+                                    <td>1,5 m</td>
+                                    <td>3 m</td>
+                                    <td>5 m</td>
+                                </tr>
+                                <tr>
+                                    <td>Edificios habitados</td>
+                                    <td>3 m</td>
+                                    <td>5 m</td>
+                                    <td>10 m</td>
+                                </tr>
+                                <tr>
+                                    <td>Vías públicas</td>
+                                    <td>3 m</td>
+                                    <td>5 m</td>
+                                    <td>7,5 m</td>
+                                </tr>
+                                <tr>
+                                    <td>Aberturas edificios</td>
+                                    <td>1,5 m</td>
+                                    <td>3 m</td>
+                                    <td>5 m</td>
+                                </tr>
+                                <tr>
+                                    <td>Focos de calor</td>
+                                    <td>2 m</td>
+                                    <td>3 m</td>
+                                    <td>5 m</td>
+                                </tr>
+                                <tr>
+                                    <td>Cuadros eléctricos</td>
+                                    <td>3 m</td>
+                                    <td>5 m</td>
+                                    <td>7,5 m</td>
+                                </tr>
+                                <tr>
+                                    <td>Sumideros y alcantarillas</td>
+                                    <td>2 m</td>
+                                    <td>2 m</td>
+                                    <td>5 m</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <div class="table-responsive">
+                        <h4>Depósitos Fijos de GLP (Enterrados)</h4>
+                        <table class="data-table">
+                            <thead>
+                                <tr>
+                                    <th>Elemento</th>
+                                    <th>Todas las capacidades</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Límite de propiedad</td>
+                                    <td>1,5 m</td>
+                                </tr>
+                                <tr>
+                                    <td>Edificios habitados</td>
+                                    <td>1,5 m</td>
+                                </tr>
+                                <tr>
+                                    <td>Cimentaciones edificios</td>
+                                    <td>3 m</td>
+                                </tr>
+                                <tr>
+                                    <td>Arquetas, sumideros</td>
+                                    <td>1,5 m</td>
+                                </tr>
+                                <tr>
+                                    <td>Profundidad de enterramiento</td>
+                                    <td>Mínimo 0,5 m sobre generatriz superior</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <h3>Distancias para Baterías de Botellas</h3>
+                    
+                    <div class="table-responsive">
+                        <table class="data-table">
+                            <thead>
+                                <tr>
+                                    <th>Elemento</th>
+                                    <th>Distancia Mínima</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Cuadros eléctricos</td>
+                                    <td>1,5 m</td>
+                                </tr>
+                                <tr>
+                                    <td>Contadores eléctricos</td>
+                                    <td>1,5 m</td>
+                                </tr>
+                                <tr>
+                                    <td>Focos de calor</td>
+                                    <td>1,5 m</td>
+                                </tr>
+                                <tr>
+                                    <td>Llaves de gas</td>
+                                    <td>0,5 m horizontal</td>
+                                </tr>
+                                <tr>
+                                    <td>Conductores eléctricos sin protección</td>
+                                    <td>3 cm</td>
+                                </tr>
+                                <tr>
+                                    <td>Sumideros y desagües</td>
+                                    <td>1 m</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <div class="alert alert-info">
+                        <i class="fas fa-info-circle"></i>
+                        <strong>Nota:</strong> Las botellas deben instalarse en posición vertical, en lugar ventilado y protegido de la intemperie.
+                    </div>
+                </div>
+
+                <div class="card">
+                    <h3>Distancias para Tuberías de Gas</h3>
+                    
+                    <div class="table-responsive">
+                        <h4>Tuberías Vistas (Interior y Exterior)</h4>
+                        <table class="data-table">
+                            <thead>
+                                <tr>
+                                    <th>Elemento</th>
+                                    <th>Distancia Mínima</th>
+                                    <th>Observaciones</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Conductores eléctricos</td>
+                                    <td>3 cm</td>
+                                    <td>Tubería protegida con aislante eléctrico</td>
+                                </tr>
+                                <tr>
+                                    <td>Contadores eléctricos</td>
+                                    <td>30 cm</td>
+                                    <td>-</td>
+                                </tr>
+                                <tr>
+                                    <td>Cuadros eléctricos</td>
+                                    <td>30 cm</td>
+                                    <td>-</td>
+                                </tr>
+                                <tr>
+                                    <td>Tuberías de agua</td>
+                                    <td>3 cm</td>
+                                    <td>-</td>
+                                </tr>
+                                <tr>
+                                    <td>Chimeneas y conductos de humos</td>
+                                    <td>5 cm</td>
+                                    <td>-</td>
+                                </tr>
+                                <tr>
+                                    <td>Focos de calor</td>
+                                    <td>15-50 cm</td>
+                                    <td>Según temperatura del foco</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <div class="table-responsive">
+                        <h4>Tuberías Enterradas</h4>
+                        <table class="data-table">
+                            <thead>
+                                <tr>
+                                    <th>Elemento</th>
+                                    <th>Distancia Mínima</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Cables eléctricos de BT</td>
+                                    <td>20 cm</td>
+                                </tr>
+                                <tr>
+                                    <td>Cables eléctricos de MT/AT</td>
+                                    <td>40 cm</td>
+                                </tr>
+                                <tr>
+                                    <td>Tuberías de agua</td>
+                                    <td>20 cm</td>
+                                </tr>
+                                <tr>
+                                    <td>Tuberías de saneamiento</td>
+                                    <td>30 cm</td>
+                                </tr>
+                                <tr>
+                                    <td>Cimentaciones</td>
+                                    <td>20 cm</td>
+                                </tr>
+                                <tr>
+                                    <td>Árboles</td>
+                                    <td>1,5 m</td>
+                                </tr>
+                                <tr>
+                                    <td>Profundidad mínima</td>
+                                    <td>40-60 cm según tipo de suelo</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <h3>Distancias para Aparatos de Gas</h3>
+                    
+                    <div class="table-responsive">
+                        <table class="data-table">
+                            <thead>
+                                <tr>
+                                    <th>Tipo de Aparato</th>
+                                    <th>Distancia a Materiales Combustibles</th>
+                                    <th>Distancia a Paredes</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Calderas murales</td>
+                                    <td>50 cm (lateral)</td>
+                                    <td>Según fabricante (mín. 5 cm)</td>
+                                </tr>
+                                <tr>
+                                    <td>Calentadores atmosféricos</td>
+                                    <td>50 cm (lateral)</td>
+                                    <td>Según fabricante</td>
+                                </tr>
+                                <tr>
+                                    <td>Cocinas</td>
+                                    <td>20 cm (lateral)</td>
+                                    <td>10 cm (trasera)</td>
+                                </tr>
+                                <tr>
+                                    <td>Estufas portátiles</td>
+                                    <td>1 m frontal, 50 cm lateral</td>
+                                    <td>50 cm</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Sección Instalación -->
+            <section id="instalacion" class="section">
+                <div class="section-header">
+                    <h2><i class="fas fa-tools"></i> Procedimientos de Instalación</h2>
+                </div>
+
+                <div class="card">
+                    <h3>1. Materiales Permitidos</h3>
+                    
+                    <div class="material-grid">
+                        <div class="material-card">
+                            <h4><i class="fas fa-pipe"></i> Tuberías Rígidas</h4>
+                            <ul>
+                                <li><strong>Cobre:</strong> UNE-EN 1057 (temple semi-duro o duro)</li>
+                                <li><strong>Acero:</strong> UNE-EN 10255 (soldado o sin soldadura)</li>
+                                <li><strong>Acero inoxidable:</strong> UNE-EN 10312</li>
+                                <li><strong>Polietileno (PE):</strong> Solo enterrado, UNE-EN 1555</li>
+                                <li><strong>Multicapa:</strong> UNE 53960 (según fabricante)</li>
+                            </ul>
+                        </div>
+
+                        <div class="material-card">
+                            <h4><i class="fas fa-wave-square"></i> Tuberías Flexibles</h4>
+                            <ul>
+                                <li><strong>Metálicas flexibles:</strong> UNE 60713</li>
+                                <li><strong>Tubo flexible para conexión de aparatos:</strong> UNE 60620
+                                    <ul>
+                                        <li>Longitud máxima: 2 m</li>
+                                        <li>No atravesar paredes</li>
+                                        <li>Conectores con juntas homologadas</li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <div class="material-card">
+                            <h4><i class="fas fa-circle-notch"></i> Válvulas y Accesorios</h4>
+                            <ul>
+                                <li><strong>Válvulas de corte:</strong> UNE-EN 331</li>
+                                <li><strong>Reguladores:</strong> UNE 60601, UNE-EN 12864</li>
+                                <li><strong>Contadores:</strong> Según UNE-EN correspondiente</li>
+                                <li><strong>Racores y accesorios:</strong> Homologados según tipo</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <h3>2. Proceso de Instalación Paso a Paso</h3>
+                    
+                    <div class="step-timeline">
+                        <div class="step-item">
+                            <div class="step-number">1</div>
+                            <div class="step-content">
+                                <h4>Proyecto y Permisos</h4>
+                                <ul>
+                                    <li>Elaborar proyecto técnico (si es necesario según potencia)</li>
+                                    <li>Solicitar permisos al ayuntamiento</li>
+                                    <li>Comunicación a la compañía suministradora</li>
+                                    <li>Certificado de instalador autorizado</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div class="step-item">
+                            <div class="step-number">2</div>
+                            <div class="step-content">
+                                <h4>Replanteo</h4>
+                                <ul>
+                                    <li>Marcar recorrido de tuberías</li>
+                                    <li>Ubicar reguladores y llaves de corte</li>
+                                    <li>Determinar ubicación de aparatos</li>
+                                    <li>Verificar distancias de seguridad</li>
+                                    <li>Comprobar requisitos de ventilación</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div class="step-item">
+                            <div class="step-number">3</div>
+                            <div class="step-content">
+                                <h4>Montaje de Tuberías</h4>
+                                <ul>
+                                    <li>Cortar tubos a medida con cortatubos</li>
+                                    <li>Eliminar rebabas y limpiar extremos</li>
+                                    <li>Realizar uniones según material:
+                                        <ul>
+                                            <li>Cobre: soldadura fuerte (> 450°C)</li>
+                                            <li>Acero: roscado o soldadura</li>
+                                            <li>PE: termofusión o electrofusión</li>
+                                        </ul>
+                                    </li>
+                                    <li>Instalar soportes cada 1-1,5 m</li>
+                                    <li>Mantener pendiente del 0,5% hacia regulador</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div class="step-item">
+                            <div class="step-number">4</div>
+                            <div class="step-content">
+                                <h4>Instalación de Llaves y Reguladores</h4>
+                                <ul>
+                                    <li>Llave de acometida (accesible)</li>
+                                    <li>Llave antes del contador</li>
+                                    <li>Llave después del contador</li>
+                                    <li>Llave individual por cada vivienda/local</li>
+                                    <li>Llave de aparato (antes de cada equipo)</li>
+                                    <li>Regulador de presión (si necesario)</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div class="step-item">
+                            <div class="step-number">5</div>
+                            <div class="step-content">
+                                <h4>Protección de Tuberías</h4>
+                                <ul>
+                                    <li>Pintar tuberías vistas en amarillo RAL 1003</li>
+                                    <li>Instalar cinta señalizadora en enterradas</li>
+                                    <li>Protección anticorrosiva en acero</li>
+                                    <li>Manguitos pasantes en muros</li>
+                                    <li>Aislamiento eléctrico si proximidad cables</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div class="step-item">
+                            <div class="step-number">6</div>
+                            <div class="step-content">
+                                <h4>Pruebas de Estanqueidad</h4>
+                                <ul>
+                                    <li>Cerrar todos los extremos</li>
+                                    <li>Purgar el aire completamente</li>
+                                    <li>Presurizar según tipo de instalación</li>
+                                    <li>Esperar tiempo de estabilización (15 min)</li>
+                                    <li>Registrar presión inicial</li>
+                                    <li>Comprobar presión final tras tiempo establecido</li>
+                                    <li>Verificar caída de presión admisible</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div class="step-item">
+                            <div class="step-number">7</div>
+                            <div class="step-content">
+                                <h4>Instalación de Aparatos</h4>
+                                <ul>
+                                    <li>Verificar compatibilidad con tipo de gas</li>
+                                    <li>Instalar según instrucciones del fabricante</li>
+                                    <li>Conectar con tubo flexible homologado</li>
+                                    <li>Instalar llave de aparato accesible</li>
+                                    <li>Verificar ventilación del local</li>
+                                    <li>Instalar conducto de evacuación (si procede)</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div class="step-item">
+                            <div class="step-number">8</div>
+                            <div class="step-content">
+                                <h4>Puesta en Marcha</h4>
+                                <ul>
+                                    <li>Purgar la instalación con gas</li>
+                                    <li>Verificar presión de suministro</li>
+                                    <li>Comprobar estanqueidad en conexiones</li>
+                                    <li>Ajustar presión del quemador</li>
+                                    <li>Verificar combustión (análisis de gases)</li>
+                                    <li>Comprobar funcionamiento de todos los aparatos</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div class="step-item">
+                            <div class="step-number">9</div>
+                            <div class="step-content">
+                                <h4>Documentación</h4>
+                                <ul>
+                                    <li>Certificado de instalación individual</li>
+                                    <li>Certificado de estanqueidad</li>
+                                    <li>Boletín de instalación (si requerido)</li>
+                                    <li>Manual de uso para el usuario</li>
+                                    <li>Esquema de la instalación</li>
+                                    <li>Registro en Industria (según CCAA)</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <h3>3. Requisitos de Ventilación</h3>
+                    
+                    <div class="table-responsive">
+                        <h4>Según Tipo de Aparato y Local</h4>
+                        <table class="data-table">
+                            <thead>
+                                <tr>
+                                    <th>Tipo de Aparato</th>
+                                    <th>Ventilación Requerida</th>
+                                    <th>Evacuación</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Tipo A (sin evacuación)</td>
+                                    <td>Superior: 5 cm²/kW (mín. 50 cm²)<br>Inferior: 10 cm²/kW (mín. 100 cm²)</td>
+                                    <td>No requiere</td>
+                                </tr>
+                                <tr>
+                                    <td>Tipo B (tiro natural)</td>
+                                    <td>Inferior: 10 cm²/kW ventilación directa</td>
+                                    <td>Conducto individual o colectivo</td>
+                                </tr>
+                                <tr>
+                                    <td>Tipo C (estanco)</td>
+                                    <td>No requiere ventilación del local</td>
+                                    <td>Conducto concéntrico o separado</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <div class="alert alert-warning">
+                        <i class="fas fa-exclamation-triangle"></i>
+                        <strong>Prohibido:</strong> Instalar aparatos tipo A en dormitorios, baños o cuartos de baño.
+                    </div>
+                </div>
+
+                <div class="card">
+                    <h3>4. Evacuación de Productos de Combustión</h3>
+                    
+                    <div class="subsection">
+                        <h4>Conductos Individuales</h4>
+                        <ul>
+                            <li>Diámetro según potencia del aparato (mínimo indicado por fabricante)</li>
+                            <li>Tramos verticales: máximo 10° de desviación</li>
+                            <li>Altura mínima: 1,5 m sobre aparato</li>
+                            <li>Terminal sobre cubierta: mínimo 40 cm</li>
+                            <li>Material resistente a 200°C y condensación</li>
+                            <li>Estanqueidad garantizada</li>
+                        </ul>
+                    </div>
+
+                    <div class="subsection">
+                        <h4>Conductos Colectivos (Shunt)</h4>
+                        <ul>
+                            <li>Sección mínima: 0,12 m² (400 cm²)</li>
+                            <li>Acometida individual: mín. 120 cm²</li>
+                            <li>Longitud acometida: máximo 2 m</li>
+                            <li>Conexión con pendiente ascendente 10-15°</li>
+                            <li>Aspirador estático en coronación</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Sección Pruebas -->
+            <section id="pruebas" class="section">
+                <div class="section-header">
+                    <h2><i class="fas fa-vial"></i> Pruebas y Verificaciones</h2>
+                </div>
+
+                <div class="card">
+                    <h3>1. Prueba de Estanqueidad</h3>
+                    
+                    <div class="step-timeline">
+                        <div class="step-item">
+                            <div class="step-number">1</div>
+                            <div class="step-content">
+                                <h4>Preparación</h4>
+                                <ul>
+                                    <li>Cerrar todas las llaves de aparato</li>
+                                    <li>Cerrar la llave general de la instalación</li>
+                                    <li>Conectar manómetro de prueba (clase 1 o superior)</li>
+                                    <li>Verificar que no haya aparatos conectados</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div class="step-item">
+                            <div class="step-number">2</div>
+                            <div class="step-content">
+                                <h4>Presurización</h4>
+                                <ul>
+                                    <li>Introducir aire o gas inerte</li>
+                                    <li>Alcanzar presión de prueba establecida:
+                                        <ul>
+                                            <li>GLP baja presión: 150 mbar</li>
+                                            <li>Gas natural baja presión: 100 mbar</li>
+                                            <li>Media presión: 1,5 × P servicio</li>
+                                        </ul>
+                                    </li>
+                                    <li>NO utilizar oxígeno puro</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div class="step-item">
+                            <div class="step-number">3</div>
+                            <div class="step-content">
+                                <h4>Estabilización</h4>
+                                <ul>
+                                    <li>Esperar 15 minutos para estabilización térmica</li>
+                                    <li>Ajustar presión si es necesario</li>
+                                    <li>Registrar temperatura ambiente</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div class="step-item">
+                            <div class="step-number">4</div>
+                            <div class="step-content">
+                                <h4>Medición</h4>
+                                <ul>
+                                    <li>Registrar presión inicial (P₀)</li>
+                                    <li>Esperar tiempo de prueba (1 hora típico)</li>
+                                    <li>Registrar presión final (Pf)</li>
+                                    <li>Calcular caída: ΔP = P₀ - Pf</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div class="step-item">
+                            <div class="step-number">5</div>
+                            <div class="step-content">
+                                <h4>Evaluación</h4>
+                                <ul>
+                                    <li>Caída admisible: ≤ 1% de presión de prueba</li>
+                                    <li>Ejemplo: 100 mbar → máx. 1 mbar caída</li>
+                                    <li>Si NO supera: localizar y reparar fugas</li>
+                                    <li>Si SÍ supera: emitir certificado</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="alert alert-danger">
+                        <i class="fas fa-ban"></i>
+                        <strong>Prohibido:</strong> NO realizar pruebas con llama, NO fumar durante la prueba, NO usar oxígeno como gas de prueba.
+                    </div>
+                </div>
+
+                <div class="card">
+                    <h3>2. Detección de Fugas</h3>
+                    
+                    <div class="method-grid">
+                        <div class="method-card">
+                            <h4><i class="fas fa-soap"></i> Método del Agua Jabonosa</h4>
+                            <p><strong>Aplicación:</strong> Pruebas visuales en conexiones</p>
+                            <ul>
+                                <li>Preparar solución jabonosa (no corrosiva)</li>
+                                <li>Aplicar en uniones y conexiones</li>
+                                <li>Observar formación de burbujas</li>
+                                <li>Marcar puntos con fugas</li>
+                            </ul>
+                        </div>
+
+                        <div class="method-card">
+                            <h4><i class="fas fa-head-side-virus"></i> Detector Electrónico</h4>
+                            <p><strong>Aplicación:</strong> Localización precisa de fugas</p>
+                            <ul>
+                                <li>Calibrar detector según gas</li>
+                                <li>Recorrer toda la instalación</li>
+                                <li>Concentrarse en uniones</li>
+                                <li>Registrar lecturas (ppm o % LEL)</li>
+                            </ul>
+                        </div>
+
+                        <div class="method-card">
+                            <h4><i class="fas fa-tint"></i> Líquido Detector</h4>
+                            <p><strong>Aplicación:</strong> Verificación en campo</p>
+                            <ul>
+                                <li>Usar productos homologados</li>
+                                <li>Aplicar con pincel o spray</li>
+                                <li>Observar formación de espuma</li>
+                                <li>Limpiar después de la prueba</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <h3>3. Análisis de Combustión</h3>
+                    
+                    <div class="subsection">
+                        <h4>Parámetros a Medir</h4>
+                        <ul>
+                            <li><strong>CO (Monóxido de carbono):</strong> Máximo 1000 ppm (0,1%) para aparatos tipo B</li>
+                            <li><strong>CO₂ (Dióxido de carbono):</strong> 
+                                <ul>
+                                    <li>Gas natural: 8-10%</li>
+                                    <li>GLP: 10-12%</li>
+                                </ul>
+                            </li>
+                            <li><strong>O₂ (Oxígeno):</strong> 5-8% (indicativo de exceso de aire)</li>
+                            <li><strong>Temperatura de humos:</strong> Según fabricante</li>
+                            <li><strong>Rendimiento de combustión:</strong> > 90% aparatos condensación</li>
+                            <li><strong>Tiro:</strong> -2 a -15 Pa (aparatos tipo B)</li>
+                        </ul>
+                    </div>
+
+                    <div class="table-responsive">
+                        <h4>Criterios de Evaluación</h4>
+                        <table class="data-table">
+                            <thead>
+                                <tr>
+                                    <th>Parámetro</th>
+                                    <th>Valor Correcto</th>
+                                    <th>Acción si Incorrecto</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>CO > 1000 ppm</td>
+                                    <td>≤ 1000 ppm</td>
+                                    <td>Ajustar aire/gas. Verificar quemador</td>
+                                </tr>
+                                <tr>
+                                    <td>CO₂ bajo</td>
+                                    <td>8-12% (según gas)</td>
+                                    <td>Reducir exceso de aire</td>
+                                </tr>
+                                <tr>
+                                    <td>CO₂ alto</td>
+                                    <td>8-12% (según gas)</td>
+                                    <td>Aumentar aire primario</td>
+                                </tr>
+                                <tr>
+                                    <td>Tiro insuficiente</td>
+                                    <td>-2 a -15 Pa</td>
+                                    <td>Verificar conducto evacuación</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <h3>4. Verificación de Presiones</h3>
+                    
+                    <div class="table-responsive">
+                        <h4>Presiones de Suministro</h4>
+                        <table class="data-table">
+                            <thead>
+                                <tr>
+                                    <th>Tipo de Gas</th>
+                                    <th>Presión Normal</th>
+                                    <th>Límites Admisibles</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Gas Natural (baja presión)</td>
+                                    <td>20 mbar</td>
+                                    <td>18-22 mbar</td>
+                                </tr>
+                                <tr>
+                                    <td>Propano (baja presión)</td>
+                                    <td>37 mbar</td>
+                                    <td>35-40 mbar</td>
+                                </tr>
+                                <tr>
+                                    <td>Butano (baja presión)</td>
+                                    <td>28 mbar</td>
+                                    <td>25-30 mbar</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <div class="subsection">
+                        <h4>Procedimiento de Verificación</h4>
+                        <ol>
+                            <li>Conectar manómetro en toma de presión del aparato</li>
+                            <li>Abrir llave de aparato</li>
+                            <li>Encender el aparato a máxima potencia</li>
+                            <li>Registrar presión dinámica</li>
+                            <li>Verificar que está dentro de límites</li>
+                            <li>Comprobar caída de presión en funcionamiento</li>
+                        </ol>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <h3>5. Documentación de Pruebas</h3>
+                    
+                    <div class="form-template">
+                        <h4>Certificado de Estanqueidad (Datos Mínimos)</h4>
+                        <ul>
+                            <li>✓ Datos del instalador y empresa</li>
+                            <li>✓ Dirección de la instalación</li>
+                            <li>✓ Tipo de gas y presión de servicio</li>
+                            <li>✓ Presión de prueba aplicada</li>
+                            <li>✓ Presión inicial (P₀)</li>
+                            <li>✓ Presión final (Pf)</li>
+                            <li>✓ Tiempo de prueba</li>
+                            <li>✓ Caída de presión (ΔP)</li>
+                            <li>✓ Resultado: APTO / NO APTO</li>
+                            <li>✓ Fecha y firma del técnico</li>
+                            <li>✓ Número de habilitación</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Sección Mantenimiento -->
+            <section id="mantenimiento" class="section">
+                <div class="section-header">
+                    <h2><i class="fas fa-wrench"></i> Mantenimiento y Revisiones</h2>
+                </div>
+
+                <div class="card">
+                    <h3>Periodicidad de Revisiones</h3>
+                    
+                    <div class="table-responsive">
+                        <table class="data-table">
+                            <thead>
+                                <tr>
+                                    <th>Elemento</th>
+                                    <th>Periodicidad</th>
+                                    <th>Responsable</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Instalación individual interior</td>
+                                    <td>5 años</td>
+                                    <td>Empresa mantenedora autorizada</td>
+                                </tr>
+                                <tr>
+                                    <td>Instalación común de edificio</td>
+                                    <td>5 años</td>
+                                    <td>Empresa mantenedora autorizada</td>
+                                </tr>
+                                <tr>
+                                    <td>Calderas < 70 kW</td>
+                                    <td>2 años (5 años si condensación)</td>
+                                    <td>Mantenedor autorizado RITE</td>
+                                </tr>
+                                <tr>
+                                    <td>Calentadores</td>
+                                    <td>2 años</td>
+                                    <td>Servicio técnico autorizado</td>
+                                </tr>
+                                <tr>
+                                    <td>Reguladores de presión</td>
+                                    <td>5 años</td>
+                                    <td>Instalador autorizado</td>
+                                </tr>
+                                <tr>
+                                    <td>Tubos flexibles</td>
+                                    <td>10 años (reemplazo)</td>
+                                    <td>Usuario / Instalador</td>
+                                </tr>
+                                <tr>
+                                    <td>Depósito GLP aéreo</td>
+                                    <td>2 años</td>
+                                    <td>Empresa suministradora</td>
+                                </tr>
+                                <tr>
+                                    <td>Depósito GLP enterrado</td>
+                                    <td>2 años (5 años revisión interior)</td>
+                                    <td>Empresa suministradora</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <h3>Revisión de Instalaciones Interiores</h3>
+                    
+                    <div class="checklist">
+                        <h4><i class="fas fa-clipboard-check"></i> Checklist de Revisión</h4>
+                        
+                        <div class="checklist-section">
+                            <h5>1. Inspección Visual</h5>
+                            <ul class="check-list">
+                                <li>☐ Estado de tuberías (corrosión, golpes, deformaciones)</li>
+                                <li>☐ Estado de soportes y fijaciones</li>
+                                <li>☐ Protección anticorrosiva</li>
+                                <li>☐ Identificación de tuberías (color amarillo)</li>
+                                <li>☐ Estado de válvulas y llaves</li>
+                                <li>☐ Accesibilidad a llaves de corte</li>
+                                <li>☐ Distancias de seguridad</li>
+                                <li>☐ Ventilación de locales</li>
+                                <li>☐ Estado de conductos de evacuación</li>
+                            </ul>
+                        </div>
+
+                        <div class="checklist-section">
+                            <h5>2. Pruebas Operativas</h5>
+                            <ul class="check-list">
+                                <li>☐ Prueba de estanqueidad (presión reducida)</li>
+                                <li>☐ Verificación de presión de suministro</li>
+                                <li>☐ Funcionamiento de llaves de corte</li>
+                                <li>☐ Funcionamiento de reguladores</li>
+                                <li>☐ Detección de fugas con detector</li>
+                                <li>☐ Verificación de conexiones flexibles</li>
+                            </ul>
+                        </div>
+
+                        <div class="checklist-section">
+                            <h5>3. Revisión de Aparatos</h5>
+                            <ul class="check-list">
+                                <li>☐ Estado general del aparato</li>
+                                <li>☐ Limpieza de quemadores</li>
+                                <li>☐ Estado de electrodos y bujías</li>
+                                <li>☐ Funcionamiento de sistemas de seguridad</li>
+                                <li>☐ Análisis de combustión</li>
+                                <li>☐ Verificación de tiro</li>
+                                <li>☐ Estado de conductos de evacuación</li>
+                                <li>☐ Ventilación del local</li>
+                            </ul>
+                        </div>
+
+                        <div class="checklist-section">
+                            <h5>4. Documentación</h5>
+                            <ul class="check-list">
+                                <li>☐ Certificado de revisión</li>
+                                <li>☐ Registro de anomalías detectadas</li>
+                                <li>☐ Recomendaciones y plazos de corrección</li>
+                                <li>☐ Actualización del libro de mantenimiento</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <h3>Operaciones de Mantenimiento Preventivo</h3>
+                    
+                    <div class="maintenance-grid">
+                        <div class="maintenance-item">
+                            <h4><i class="fas fa-broom"></i> Limpieza</h4>
+                            <ul>
+                                <li>Limpieza de quemadores</li>
+                                <li>Eliminación de hollín en intercambiadores</li>
+                                <li>Limpieza de filtros</li>
+                                <li>Limpieza de sifones de condensados</li>
+                            </ul>
+                        </div>
+
+                        <div class="maintenance-item">
+                            <h4><i class="fas fa-oil-can"></i> Lubricación</h4>
+                            <ul>
+                                <li>Lubricación de válvulas</li>
+                                <li>Mantenimiento de partes móviles</li>
+                                <li>Verificación de juntas</li>
+                            </ul>
+                        </div>
+
+                        <div class="maintenance-item">
+                            <h4><i class="fas fa-tools"></i> Ajustes</h4>
+                            <ul>
+                                <li>Ajuste de aire/gas</li>
+                                <li>Calibración de reguladores</li>
+                                <li>Ajuste de termostatos</li>
+                                <li>Configuración de presostatos</li>
+                            </ul>
+                        </div>
+
+                        <div class="maintenance-item">
+                            <h4><i class="fas fa-sync"></i> Reemplazos</h4>
+                            <ul>
+                                <li>Juntas deterioradas</li>
+                                <li>Tubos flexibles (cada 10 años)</li>
+                                <li>Electrodos y bujías</li>
+                                <li>Piezas desgastadas</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <h3>Defectos Comunes y Soluciones</h3>
+                    
+                    <div class="table-responsive">
+                        <table class="data-table">
+                            <thead>
+                                <tr>
+                                    <th>Problema</th>
+                                    <th>Posible Causa</th>
+                                    <th>Solución</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Llama amarilla</td>
+                                    <td>Falta de aire primario</td>
+                                    <td>Ajustar regulación aire/gas. Limpiar quemador</td>
+                                </tr>
+                                <tr>
+                                    <td>CO elevado</td>
+                                    <td>Combustión incompleta</td>
+                                    <td>Ajustar exceso de aire. Verificar tiro</td>
+                                </tr>
+                                <tr>
+                                    <td>Caldera no arranca</td>
+                                    <td>Falta de presión de gas</td>
+                                    <td>Verificar llave abierta. Comprobar regulador</td>
+                                </tr>
+                                <tr>
+                                    <td>Olor a gas</td>
+                                    <td>Fuga en instalación</td>
+                                    <td>Cerrar llave. Localizar y reparar fuga</td>
+                                </tr>
+                                <tr>
+                                    <td>Presión baja</td>
+                                    <td>Regulador defectuoso</td>
+                                    <td>Verificar y sustituir regulador</td>
+                                </tr>
+                                <tr>
+                                    <td>Apagado repentino</td>
+                                    <td>Termopar defectuoso</td>
+                                    <td>Verificar señal. Sustituir si necesario</td>
+                                </tr>
+                                <tr>
+                                    <td>Condensación excesiva</td>
+                                    <td>Temperatura de retorno baja</td>
+                                    <td>Ajustar caudal. Verificar circuito</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Sección Seguridad -->
+            <section id="seguridad" class="section">
+                <div class="section-header">
+                    <h2><i class="fas fa-shield-alt"></i> Seguridad y Prevención</h2>
+                </div>
+
+                <div class="card">
+                    <h3>Riesgos y Medidas Preventivas</h3>
+                    
+                    <div class="risk-grid">
+                        <div class="risk-card danger">
+                            <h4><i class="fas fa-fire"></i> Riesgo de Explosión</h4>
+                            <div class="risk-content">
+                                <p><strong>Causas:</strong></p>
+                                <ul>
+                                    <li>Acumulación de gas en espacios confinados</li>
+                                    <li>Mezcla gas-aire en proporciones explosivas (5-15% gas natural)</li>
+                                    <li>Presencia de fuentes de ignición</li>
+                                </ul>
+                                <p><strong>Prevención:</strong></p>
+                                <ul>
+                                    <li>✓ Ventilar adecuadamente los locales</li>
+                                    <li>✓ Instalar detectores de gas</li>
+                                    <li>✓ Eliminar fuentes de ignición</li>
+                                    <li>✓ Mantener estanqueidad de la instalación</li>
+                                    <li>✓ NO usar llamas para detectar fugas</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div class="risk-card danger">
+                            <h4><i class="fas fa-skull-crossbones"></i> Intoxicación por CO</h4>
+                            <div class="risk-content">
+                                <p><strong>Causas:</strong></p>
+                                <ul>
+                                    <li>Combustión incompleta</li>
+                                    <li>Ventilación insuficiente</li>
+                                    <li>Conductos de evacuación obstruidos</li>
+                                    <li>Retroceso de humos</li>
+                                </ul>
+                                <p><strong>Prevención:</strong></p>
+                                <ul>
+                                    <li>✓ Garantizar ventilación adecuada</li>
+                                    <li>✓ Mantener conductos de evacuación limpios</li>
+                                    <li>✓ Realizar análisis de combustión periódicos</li>
+                                    <li>✓ Instalar detectores de CO</li>
+                                    <li>✓ Revisiones periódicas de aparatos</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div class="risk-card warning">
+                            <h4><i class="fas fa-burn"></i> Riesgo de Incendio</h4>
+                            <div class="risk-content">
+                                <p><strong>Causas:</strong></p>
+                                <ul>
+                                    <li>Fuga de gas cerca de materiales combustibles</li>
+                                    <li>Distancias de seguridad insuficientes</li>
+                                    <li>Mal estado de aparatos</li>
+                                </ul>
+                                <p><strong>Prevención:</strong></p>
+                                <ul>
+                                    <li>✓ Respetar distancias a materiales combustibles</li>
+                                    <li>✓ Mantener orden y limpieza</li>
+                                    <li>✓ Instalar extintores adecuados</li>
+                                    <li>✓ Formación en uso de extintores</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div class="risk-card warning">
+                            <h4><i class="fas fa-temperature-high"></i> Quemaduras</h4>
+                            <div class="risk-content">
+                                <p><strong>Causas:</strong></p>
+                                <ul>
+                                    <li>Contacto con superficies calientes</li>
+                                    <li>Manipulación de tuberías con gas</li>
+                                    <li>Retorno de llama</li>
+                                </ul>
+                                <p><strong>Prevención:</strong></p>
+                                <ul>
+                                    <li>✓ Usar EPIs adecuados (guantes resistentes)</li>
+                                    <li>✓ Aislar superficies calientes</li>
+                                    <li>✓ Señalizar zonas de riesgo</li>
+                                    <li>✓ Esperar enfriamiento antes de manipular</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <h3>Equipos de Protección Individual (EPIs)</h3>
+                    
+                    <div class="epi-grid">
+                        <div class="epi-item">
+                            <i class="fas fa-hard-hat"></i>
+                            <h4>Casco de Seguridad</h4>
+                            <p>Obligatorio en obras y zonas de riesgo de caída de objetos</p>
+                        </div>
+
+                        <div class="epi-item">
+                            <i class="fas fa-glasses"></i>
+                            <h4>Gafas de Protección</h4>
+                            <p>Para trabajos de soldadura y corte</p>
+                        </div>
+
+                        <div class="epi-item">
+                            <i class="fas fa-hands"></i>
+                            <h4>Guantes</h4>
+                            <p>Resistentes a cortes y temperatura. Tipo según tarea</p>
+                        </div>
+
+                        <div class="epi-item">
+                            <i class="fas fa-shoe-prints"></i>
+                            <h4>Calzado de Seguridad</h4>
+                            <p>Puntera reforzada, suela antideslizante</p>
+                        </div>
+
+                        <div class="epi-item">
+                            <i class="fas fa-vest"></i>
+                            <h4>Ropa de Trabajo</h4>
+                            <p>Ignífuga, sin elementos sueltos</p>
+                        </div>
+
+                        <div class="epi-item">
+                            <i class="fas fa-head-side-mask"></i>
+                            <h4>Protección Respiratoria</h4>
+                            <p>En espacios confinados o con gases</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <h3>Actuación en Caso de Emergencia</h3>
+                    
+                    <div class="emergency-protocol">
+                        <div class="emergency-case">
+                            <h4><i class="fas fa-exclamation-triangle"></i> Fuga de Gas</h4>
+                            <ol class="emergency-steps">
+                                <li><strong>NO ENCENDER</strong> luces ni aparatos eléctricos</li>
+                                <li><strong>NO USAR</strong> teléfono móvil en la zona</li>
+                                <li><strong>CERRAR</strong> llave general de gas inmediatamente</li>
+                                <li><strong>VENTILAR</strong> abriendo puertas y ventanas</li>
+                                <li><strong>EVACUAR</strong> la zona afectada</li>
+                                <li><strong>LLAMAR</strong> a emergencias desde zona segura: 112</li>
+                                <li><strong>AVISAR</strong> a compañía suministradora</li>
+                                <li><strong>NO REPARAR</strong> sin eliminar completamente el gas</li>
+                            </ol>
+                        </div>
+
+                        <div class="emergency-case">
+                            <h4><i class="fas fa-fire-alt"></i> Incendio</h4>
+                            <ol class="emergency-steps">
+                                <li><strong>CERRAR</strong> llave de gas si es posible hacerlo con seguridad</li>
+                                <li><strong>EVACUAR</strong> inmediatamente</li>
+                                <li><strong>LLAMAR</strong> al 112 (bomberos)</li>
+                                <li><strong>USAR</strong> extintor solo si el fuego es pequeño y controlable</li>
+                                <li><strong>NO USAR AGUA</strong> en fuegos de gas (extintor CO₂ o polvo)</li>
+                                <li><strong>NO CERRAR</strong> la llave si hay llamas cerca</li>
+                                <li>Dejar actuar a los bomberos</li>
+                            </ol>
+                        </div>
+
+                        <div class="emergency-case">
+                            <h4><i class="fas fa-lungs"></i> Intoxicación por CO</h4>
+                            <ol class="emergency-steps">
+                                <li><strong>SACAR</strong> a la persona al exterior (aire fresco)</li>
+                                <li><strong>LLAMAR</strong> al 112 inmediatamente</li>
+                                <li><strong>VENTILAR</strong> el local ampliamente</li>
+                                <li><strong>CERRAR</strong> el aparato y la llave de gas</li>
+                                <li><strong>MANTENER</strong> a la persona en reposo</li>
+                                <li><strong>RCP</strong> si es necesario y se sabe hacer</li>
+                                <li><strong>NO REACTIVAR</strong> aparatos hasta revisión completa</li>
+                            </ol>
+                            <div class="alert alert-danger">
+                                <strong>Síntomas de intoxicación por CO:</strong> dolor de cabeza, mareos, náuseas, confusión, pérdida de consciencia
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <h3>Teléfonos de Emergencia</h3>
+                    
+                    <div class="phone-grid">
+                        <div class="phone-card emergency">
+                            <i class="fas fa-phone-alt"></i>
+                            <h4>112</h4>
+                            <p>Emergencias Generales<br>(24 horas)</p>
+                        </div>
+
+                        <div class="phone-card">
+                            <i class="fas fa-fire-extinguisher"></i>
+                            <h4>080 / 085</h4>
+                            <p>Bomberos<br>(según comunidad)</p>
+                        </div>
+
+                        <div class="phone-card">
+                            <i class="fas fa-ambulance"></i>
+                            <h4>061</h4>
+                            <p>Urgencias Sanitarias<br>(según comunidad)</p>
+                        </div>
+
+                        <div class="phone-card">
+                            <i class="fas fa-gas-pump"></i>
+                            <h4>900 750 750</h4>
+                            <p>Emergencias Gas Natural<br>(Naturgy - ejemplo)</p>
+                        </div>
+                    </div>
+
+                    <div class="alert alert-info">
+                        <i class="fas fa-info-circle"></i>
+                        <strong>Nota:</strong> El número de emergencias de gas puede variar según la compañía suministradora. Consultar el número específico de tu zona.
+                    </div>
+                </div>
+
+                <div class="card">
+                    <h3>Normas de Seguridad en el Trabajo</h3>
+                    
+                    <div class="safety-rules">
+                        <h4>Antes de Iniciar el Trabajo</h4>
+                        <ul class="check-list">
+                            <li>☐ Verificar que se dispone de todas las herramientas necesarias</li>
+                            <li>☐ Comprobar el estado de los EPIs</li>
+                            <li>☐ Identificar riesgos específicos del trabajo</li>
+                            <li>☐ Comunicar el plan de trabajo</li>
+                            <li>☐ Verificar ventilación de la zona</li>
+                            <li>☐ Comprobar que no hay personas no autorizadas</li>
+                        </ul>
+
+                        <h4>Durante el Trabajo</h4>
+                        <ul class="check-list">
+                            <li>☐ Usar siempre los EPIs correspondientes</li>
+                            <li>☐ Mantener orden y limpieza</li>
+                            <li>☐ No improvisar soluciones no seguras</li>
+                            <li>☐ Verificar continuamente las condiciones de seguridad</li>
+                            <li>☐ Tener detector de gas operativo</li>
+                            <li>☐ Mantener extintores accesibles</li>
+                            <li>☐ No trabajar solo en instalaciones de riesgo</li>
+                        </ul>
+
+                        <h4>Al Finalizar el Trabajo</h4>
+                        <ul class="check-list">
+                            <li>☐ Verificar que no quedan fugas</li>
+                            <li>☐ Comprobar el correcto funcionamiento</li>
+                            <li>☐ Limpiar y recoger herramientas</li>
+                            <li>☐ Informar al usuario de las medidas de seguridad</li>
+                            <li>☐ Completar la documentación</li>
+                            <li>☐ Señalizar si hay trabajos pendientes</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Sobre esta Guía</h3>
+                    <p>Guía técnica completa para profesionales técnicos de gas tipo B en España. Actualizada con las últimas normativas UNE vigentes.</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Aviso Legal</h3>
+                    <p>Esta guía es informativa. Consulte siempre la normativa oficial vigente y las especificaciones de los fabricantes. El instalador es responsable de cumplir toda la legislación aplicable.</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Recursos</h3>
+                    <ul>
+                        <li><a href="https://www.une.org" target="_blank">UNE - Normalización Española</a></li>
+                        <li><a href="https://www.minetur.gob.es" target="_blank">Ministerio de Industria</a></li>
+                        <li><a href="https://www.idae.es" target="_blank">IDAE</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Guía Técnico de Gas B - España | Versión 1.0</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
 </body>
 </html>
