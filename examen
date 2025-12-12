@@ -1,0 +1,75 @@
+import { useState } from "react";
+
+const preguntas = [
+  {
+    id: 1,
+    texto: "¿Cuál es la presión máxima de una instalación receptora doméstica según normativa?",
+    opciones: ["25 mbar", "50 mbar", "200 mbar", "500 mbar"],
+    correcta: 1,
+  },
+  {
+    id: 2,
+    texto: "¿Qué potencia máxima puede tener un aparato conectado a conducto estanco en viviendas?",
+    opciones: ["24 kW", "70 kW", "50 kW", "110 kW"],
+    correcta: 1,
+  },
+  {
+    id: 3,
+    texto: "¿Qué tubo se usa habitualmente para IRC en gas natural segun normativa actual?",
+    opciones: ["Cobre", "Polietileno + metálico en interior", "Acero inoxidable corrugado", "PVC reforzado"],
+    correcta: 2,
+  },
+  // ... Continúa hasta 30 preguntas
+];
+
+export default function ExamenGasB() {
+  const [respuestas, setRespuestas] = useState({});
+
+  const responder = (id, opcionIndex) => {
+    setRespuestas((prev) => ({ ...prev, [id]: opcionIndex }));
+  };
+
+  return (
+    <div className="p-6 max-w-3xl mx-auto space-y-6">
+      <h1 className="text-3xl font-bold mb-4">Examen Técnico Gas B (30 Preguntas)</h1>
+      {preguntas.map((p) => (
+        <div key={p.id} className="p-4 border rounded-2xl shadow">
+          <p className="font-semibold mb-2">{p.id}. {p.texto}</p>
+          <div className="space-y-2">
+            {p.opciones.map((op, index) => {
+              const elegido = respuestas[p.id] === index;
+              const corregido = respuestas[p.id] !== undefined;
+              const esCorrecta = p.correcta === index;
+
+              return (
+                <button
+                  key={index}
+                  onClick={() => responder(p.id, index)}
+                  className={`w-full text-left p-2 rounded-xl border transition
+                    ${elegido ? "bg-blue-200" : "bg-white"}
+                    ${corregido && esCorrecta ? "border-green-600" : ""}
+                    ${corregido && elegido && !esCorrecta ? "border-red-600" : ""}
+                  `}
+                >
+                  {op}
+                </button>
+              );
+            })}
+          </div>
+
+          {respuestas[p.id] !== undefined && (
+            <p className="mt-2 font-bold">
+              {respuestas[p.id] === p.correcta ? (
+                <span className="text-green-600">✔ Correcto</span>
+              ) : (
+                <span className="text-red-600">
+                  ✘ Incorrecto — Respuesta correcta: {p.opciones[p.correcta]}
+                </span>
+              )}
+            </p>
+          )}
+        </div>
+      ))}
+    </div>
+  );
+}
