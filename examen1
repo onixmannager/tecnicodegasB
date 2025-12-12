@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exámenes Gas B - Inicio</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #f4f4f4;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background: #222;
+            color: white;
+            padding: 15px;
+            text-align: center;
+        }
+
+        nav {
+            background: #444;
+            padding: 10px;
+            display: flex;
+            gap: 10px;
+            justify-content: center;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            background: #666;
+            padding: 8px 15px;
+            border-radius: 5px;
+        }
+
+        nav a:hover {
+            background: #888;
+        }
+
+        .container {
+            padding: 20px;
+            max-width: 900px;
+            margin: auto;
+            background: white;
+            margin-top: 20px;
+            border-radius: 10px;
+        }
+
+        h2 {
+            text-align: center;
+        }
+
+        ul {
+            line-height: 1.8;
+            font-size: 18px;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Exámenes Gas B</h1>
+        <p>Selecciona el examen desde el menú</p>
+    </header>
+
+    <nav>
+        <a href="index.html">Inicio</a>
+        <a href="examen1.html">Examen 1</a>
+        <a href="#">Examen 2</a>
+        <a href="#">Examen 3</a>
+    </nav>
+
+    <div class="container">
+        <h2>Bienvenido</h2>
+        <p>Aquí encontrarás todos los exámenes reales del curso de Instalador de Gas B. Cada día añadiremos uno nuevo.</p>
+
+        <h3>Exámenes disponibles:</h3>
+        <ul>
+            <li><a href="examen1.html">Examen 1</a> — 30 preguntas reales</li>
+            <li>Examen 2 — Próximamente</li>
+            <li>Examen 3 — Próximamente</li>
+        </ul>
+    </div>
+
+</body>
+</html>
